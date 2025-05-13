@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitch Text Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="logo.png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <svg id="siteLogo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C68.9381 90 84.8059 76.7041 88.8385 60H70C66.6863 60 60 66.6863 60 70C60 73.3137 53.3137 80 50 80C38.9543 80 30 71.0457 30 60C30 48.9543 38.9543 40 50 40C53.8663 40 57.4048 41.0801 60.3436 42.899L65 35H50C45 35 45 45 45 45V55H70V50C70 46.6863 73.3137 40 80 40C82.7614 40 85 42.2386 85 45C85 47.7614 82.7614 50 80 50H75L90 50C90 27.9086 72.0914 10 50 10ZM75 60V55H80C82.7614 55 85 52.7614 85 50C85 47.2386 82.7614 45 80 45H78L78 42C78 38.6863 75.3137 30 68 30C63.0017 30 58.5288 32.1003 55.5087 35.1701L50.8903 31.8816C57.5598 24.5852 67.6431 20 78 20C89.0457 20 90 28.9543 90 30V40L88.8385 40H70V30H65V25L60.3436 27.101C57.4048 23.9199 53.8663 20 50 20C33.4315 20 20 33.4315 20 50C20 66.5685 33.4315 80 50 80C59.9484 80 68.4838 74.6219 73.3168 66.5H88.8385C84.8059 83.2959 68.9381 90 50 90C27.9086 90 10 72.0914 10 50C10 27.9086 27.9086 10 50 10Z"
+                          fill="currentColor"/>
+                </svg>
+                <h1>Glitch Text Generator</h1>
+            </div>
+            <p class="subtitle">Transform your text into creepy, scary, or cool glitch art styles, inspired by Zalgo.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="generator-section">
+            <div class="input-output-container">
+                <div class="input-side">
+                    <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+                    <div class="controls">
+                        <div class="effect-selector">
+                            <label for="glitchType">Effect Style:</label>
+                            <select id="glitchType">
+                                <option value="zalgo">Z̫̫͙͙a̳̳̹l͙͙̫g̫̫͙o̫͙͙</option>
+                                <option value="matrix">Matrix Style</option>
+                                <option value="shuffle">Shuffle Glitch</option>
+                                <option value="mirror">Mirror Glitch</option>
+                            </select>
+                        </div>
+                        <div class="intensity-control">
+                            <label for="intensitySlider">Craziness Level:</label>
+                            <div class="slider-container">
+                                <input type="range" id="intensitySlider" min="1" max="20" value="5" step="0.5" class="slider">
+                                <span class="slider-value">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="output-side">
+                    <div id="outputText" class="output-text">
+                        <div class="text-container"></div>
+                    </div>
+                    <div class="button-group">
+                        <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+                            <i class="fas fa-copy"></i> Copy Text
+                        </button>
+                        <button id="saveImageBtn" class="save-btn" title="Save as image">
+                            <i class="fas fa-image"></i> Save as Image
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="info-section">
+            <h2>About Glitch Text Generator</h2>
+            <p>Glitch Text Generator is a free online tool that transforms your normal text into various glitch styles. Whether you want to create creepy text effects, matrix-style transformations, or other unique text variations, our generator has you covered.</p>
+            
+            <h3>Available Effects</h3>
+            <div class="effects-grid">
+                <div class="effect-card">
+                    <h4>Zalgo Text</h4>
+                    <p>Creates a creepy, distorted effect by adding combining characters above and below the text. Use the Craziness Level slider to control the intensity of the effect.</p>
+                </div>
+                <div class="effect-card">
+                    <h4>Matrix Style</h4>
+                    <p>Transforms your text with random numbers and symbols, creating a effect reminiscent of the Matrix movie. Adjust the intensity to control how many characters are replaced.</p>
+                </div>
+                <div class="effect-card">
+                    <h4>Shuffle Glitch</h4>
+                    <p>Slightly modifies characters to create a glitchy, corrupted text effect. Higher intensity levels create more noticeable distortions.</p>
+                </div>
+                <div class="effect-card">
+                    <h4>Mirror Text</h4>
+                    <p>Creates a mirror effect by reversing the text and combining it with the original. The intensity affects the number of mirror iterations.</p>
+                </div>
+            </div>
+
+            <h3>How It Works</h3>
+            <p>Our text generator uses Unicode character combinations and special algorithms to create various glitch effects. For the Zalgo effect, it combines multiple diacritic marks with each character. The Craziness Level slider controls how many marks are added to each character, allowing you to create subtle to extreme effects.</p>
+
+            <h3>Usage Tips</h3>
+            <ul class="tips-list">
+                <li>Type or paste your text in the input box</li>
+                <li>Select your desired effect from the dropdown menu</li>
+                <li>Adjust the Craziness Level slider to control the effect intensity</li>
+                <li>The effect will be applied automatically</li>
+                <li>Use the copy button to copy the transformed text</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>Made with <i class="fas fa-heart"></i> | <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
