@@ -73,7 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const replacementChance = Math.pow(intensity / 20, 1.2);
         
         return text.split('').map(char => {
-            if (Math.random() < replacementChance) {
+            // Only replace ASCII alphanumeric and some symbols
+            if (/[a-zA-Z0-9@#$%^&*]/.test(char) && Math.random() < replacementChance) {
                 return matrixChars[Math.floor(Math.random() * matrixChars.length)];
             }
             return char;
@@ -88,9 +89,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const maxOffset = Math.ceil(intensity * 1.5);
         
         return text.split('').map(char => {
-            if (Math.random() < shuffleChance && char !== ' ') {
-                const offset = Math.floor(Math.random() * maxOffset * 2) - maxOffset;
-                return String.fromCharCode(char.charCodeAt(0) + offset);
+            // Only shuffle Latin letters
+            if (/[a-zA-Z]/.test(char) && Math.random() < shuffleChance && char !== ' ') {
+                const charCode = char.charCodeAt(0);
+                let offset = Math.floor(Math.random() * maxOffset * 2) - maxOffset;
+                let newCharCode = charCode + offset;
+
+                // Keep shuffled characters within Latin alphabet ranges if possible
+                if (char >= 'a' && char <= 'z') {
+                    if (newCharCode < 'a'.charCodeAt(0)) newCharCode = 'a'.charCodeAt(0) + (('a'.charCodeAt(0) - newCharCode -1) % 26);
+                    if (newCharCode > 'z'.charCodeAt(0)) newCharCode = 'z'.charCodeAt(0) - ((newCharCode - 'z'.charCodeAt(0) -1) % 26);
+                } else if (char >= 'A' && char <= 'Z') {
+                    if (newCharCode < 'A'.charCodeAt(0)) newCharCode = 'A'.charCodeAt(0) + (('A'.charCodeAt(0) - newCharCode -1) % 26);
+                    if (newCharCode > 'Z'.charCodeAt(0)) newCharCode = 'Z'.charCodeAt(0) - ((newCharCode - 'Z'.charCodeAt(0) -1) % 26);
+                }
+                // If offset is too large and goes out of typical printable ASCII, consider not changing or a different strategy.
+                // For now, this might still produce non-Latin chars if original offset is large.
+                // A stricter approach would be to cap newCharCode to ensure it stays within Latin a-z/A-Z.
+                // The modulo logic above attempts to wrap around within the respective case range.
+
+                return String.fromCharCode(newCharCode);
             }
             return char;
         }).join('');
@@ -150,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         textContainer.textContent = result;
+        console.log("Generated result:", result);
     }
 
     // Copy to clipboard functionality
@@ -205,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
                  minAbsCanvasWidth = 300 + (currentIntensity - 5) * 10; // Min canvas width from 300px (at 5) up to 350px (at 10)
             }
 
-            ctx.font = `${fontSize}px Arial`;
+            ctx.font = `${fontSize}px 'Microsoft YaHei', 'SimSun', 'PingFang SC', 'Noto Sans CJK SC', Arial, sans-serif`;
             
             const textToRender = textContainer.textContent || placeholderText;
             const lines = textToRender.split('\\n');
@@ -227,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             ctx.fillStyle = '#1e293b';
-            ctx.font = `${fontSize}px Arial`;
+            ctx.font = `${fontSize}px 'Microsoft YaHei', 'SimSun', 'PingFang SC', 'Noto Sans CJK SC', Arial, sans-serif`;
             ctx.textAlign = 'center';
 
             const totalTextHeight = lineHeight * lines.length;

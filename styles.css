@@ -110,8 +110,8 @@ textarea {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     color: var(--text-primary);
-    padding: 105px 1rem 0;
-    font-size: 1rem;
+    padding: 106px 1rem 0;
+    font-size: 1.6rem;
     font-family: inherit;
     resize: none;
     transition: var(--transition);
@@ -145,7 +145,7 @@ textarea::-webkit-scrollbar {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 0 1rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
     line-height: 1.6;
     overflow-wrap: break-word;
     box-shadow: var(--shadow-sm);
@@ -179,7 +179,7 @@ textarea::placeholder {
     width: 100%;
     text-align: center;
     padding: 0 1rem;
-    line-height: normal;
+    line-height: 1.5;
 }
 
 /* Controls section */
@@ -469,7 +469,7 @@ select:focus {
     }
 
     textarea {
-        padding: 85px 1rem 0;
+        padding: 81px 1rem 0;
     }
 
     .info-section {
