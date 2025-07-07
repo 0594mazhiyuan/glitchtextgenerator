@@ -14,17 +14,73 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glitch Text Generator</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Glitch Text Generator - Free Online Zalgo, Matrix & Logo Effects Tool</title>
+    <meta name="description" content="Transform your text into creepy, scary, or cool glitch art styles with our free online glitch text generator. Create Zalgo text, Matrix effects, shuffle glitch, mirror text, and typography-focused glitch logos instantly. No download required.">
+    <meta name="keywords" content="glitch text generator, zalgo text, matrix text, text effects, online tool, text glitch, glitch art, creepy text, zalgo generator, matrix style text, text distortion, glitch logo, logo generator, glitch logo maker, typography, typography art, glitch typography">
+    <meta name="author" content="Glitch Text Generator">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Glitch Text Generator - Free Online Zalgo, Matrix & Logo Effects Tool">
+    <meta property="og:description" content="Transform your text into creepy, scary, or cool glitch art styles. Create Zalgo text, Matrix effects, typography-focused glitch logos, and more with our free online tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glitchtextgenerator.com">
+    <meta property="og:image" content="https://glitchtextgenerator.com/logo.png">
+    <meta property="og:site_name" content="Glitch Text Generator">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Glitch Text Generator - Free Online Text Effects Tool">
+    <meta name="twitter:description" content="Create creepy Zalgo text, Matrix effects, and glitch art with our free online generator.">
+    <meta name="twitter:image" content="https://glitchtextgenerator.com/logo.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Glitch Text Generator",
+      "description": "Free online tool to transform text into various glitch art styles including Zalgo text, Matrix effects, shuffle glitch, and mirror text.",
+      "url": "https://glitchtextgenerator.com",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Zalgo Text Generator",
+        "Matrix Style Text",
+        "Shuffle Glitch Effect",
+        "Mirror Text Effect",
+        "Typography Glitch Logo Generator",
+        "Intensity Control",
+        "Copy to Clipboard",
+        "Save as Image"
+      ],
+      "creator": {
+        "@type": "Organization",
+        "name": "Glitch Text Generator"
+      }
+    }
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="apple-touch-icon" href="logo.png">
+    <link rel="canonical" href="https://glitchtextgenerator.com">
 </head>
 <body>
     <header class="main-header">
         <div class="container">
             <div class="header-content">
-                <svg id="siteLogo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <svg id="siteLogo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Glitch Text Generator Logo">
+                    <title>Glitch Text Generator Logo</title>
                     <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C68.9381 90 84.8059 76.7041 88.8385 60H70C66.6863 60 60 66.6863 60 70C60 73.3137 53.3137 80 50 80C38.9543 80 30 71.0457 30 60C30 48.9543 38.9543 40 50 40C53.8663 40 57.4048 41.0801 60.3436 42.899L65 35H50C45 35 45 45 45 45V55H70V50C70 46.6863 73.3137 40 80 40C82.7614 40 85 42.2386 85 45C85 47.7614 82.7614 50 80 50H75L90 50C90 27.9086 72.0914 10 50 10ZM75 60V55H80C82.7614 55 85 52.7614 85 50C85 47.2386 82.7614 45 80 45H78L78 42C78 38.6863 75.3137 30 68 30C63.0017 30 58.5288 32.1003 55.5087 35.1701L50.8903 31.8816C57.5598 24.5852 67.6431 20 78 20C89.0457 20 90 28.9543 90 30V40L88.8385 40H70V30H65V25L60.3436 27.101C57.4048 23.9199 53.8663 20 50 20C33.4315 20 20 33.4315 20 50C20 66.5685 33.4315 80 50 80C59.9484 80 68.4838 74.6219 73.3168 66.5H88.8385C84.8059 83.2959 68.9381 90 50 90C27.9086 90 10 72.0914 10 50C10 27.9086 27.9086 10 50 10Z"
                           fill="currentColor"/>
@@ -36,7 +92,7 @@
     </header>
 
     <main class="container">
-        <div class="generator-section">
+        <div class="generator-section" id="generator">
             <div class="input-output-container">
                 <div class="input-side">
                     <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
@@ -48,9 +104,11 @@
                                 <option value="matrix">Matrix Style</option>
                                 <option value="shuffle">Shuffle Glitch</option>
                                 <option value="mirror">Mirror Glitch</option>
+                                <option value="logo">Glitch Logo</option>
                             </select>
+
                         </div>
-                        <div class="intensity-control">
+                        <div class="intensity-control" id="intensity">
                             <label for="intensitySlider">Craziness Level:</label>
                             <div class="slider-container">
                                 <input type="range" id="intensitySlider" min="1" max="20" value="5" step="0.5" class="slider">
@@ -76,47 +134,151 @@
             </div>
         </div>
 
-        <section class="info-section">
+        <section class="info-section" id="about">
             <h2>About Glitch Text Generator</h2>
-            <p>Glitch Text Generator is a free online tool that transforms your normal text into various glitch styles. Whether you want to create creepy text effects, matrix-style transformations, or other unique text variations, our generator has you covered.</p>
+            <p>Glitch Text Generator is a free online tool that transforms your normal text into various glitch styles. Whether you want to create creepy text effects, matrix-style transformations, or other unique text variations, our generator has you covered. Perfect for social media posts, gaming usernames, creative writing, and digital art projects.</p>
+            
+            <h3>What is Glitch Text?</h3>
+            <p>Glitch text, also known as corrupted text or zalgo text, is a form of text art that uses Unicode combining characters to create distorted, creepy, or visually striking effects. It originated from internet culture and has become popular in gaming communities, social media, and digital art.</p>
             
             <h3>Available Effects</h3>
             <div class="effects-grid">
-                <div class="effect-card">
+                <div class="effect-card" id="zalgo">
                     <h4>Zalgo Text</h4>
-                    <p>Creates a creepy, distorted effect by adding combining characters above and below the text. Use the Craziness Level slider to control the intensity of the effect.</p>
+                    <p>Creates a creepy, distorted effect by adding combining characters above and below the text. Use the Craziness Level slider to control the intensity of the effect. Perfect for horror-themed content and creepy usernames.</p>
                 </div>
-                <div class="effect-card">
+                <div class="effect-card" id="matrix">
                     <h4>Matrix Style</h4>
-                    <p>Transforms your text with random numbers and symbols, creating a effect reminiscent of the Matrix movie. Adjust the intensity to control how many characters are replaced.</p>
+                    <p>Transforms your text with random numbers and symbols, creating an effect reminiscent of the Matrix movie. Adjust the intensity to control how many characters are replaced. Great for cyberpunk and tech-themed content.</p>
                 </div>
-                <div class="effect-card">
+                <div class="effect-card" id="shuffle">
                     <h4>Shuffle Glitch</h4>
-                    <p>Slightly modifies characters to create a glitchy, corrupted text effect. Higher intensity levels create more noticeable distortions.</p>
+                    <p>Slightly modifies characters to create a glitchy, corrupted text effect. Higher intensity levels create more noticeable distortions. Ideal for creating a "broken" or "glitched" appearance.</p>
                 </div>
-                <div class="effect-card">
+                <div class="effect-card" id="mirror">
                     <h4>Mirror Text</h4>
-                    <p>Creates a mirror effect by reversing the text and combining it with the original. The intensity affects the number of mirror iterations.</p>
+                    <p>Creates a mirror effect by reversing the text and combining it with the original. The intensity affects the number of mirror iterations. Perfect for creating symmetrical text art and unique designs.</p>
+                </div>
+                <div class="effect-card" id="logo">
+                    <h4>Glitch Logo</h4>
+                    <p>Creates typography-focused logo designs with subtle glitch elements. Features character variations, kerning effects, and spacing adjustments while maintaining professional readability. Perfect for modern brand logos, headers, and typography art.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                        <a href="glitch-logo.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-external-link-alt"></i> Visit Dedicated Logo Designer
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <h3>How It Works</h3>
-            <p>Our text generator uses Unicode character combinations and special algorithms to create various glitch effects. For the Zalgo effect, it combines multiple diacritic marks with each character. The Craziness Level slider controls how many marks are added to each character, allowing you to create subtle to extreme effects.</p>
+            <h3 id="how-it-works">How It Works</h3>
+            <p>Our text generator uses Unicode character combinations and special algorithms to create various glitch effects. For the Zalgo effect, it combines multiple diacritic marks with each character. The Craziness Level slider controls how many marks are added to each character, allowing you to create subtle to extreme effects. All processing happens in your browser - no data is sent to our servers.</p>
 
-            <h3>Usage Tips</h3>
+            <h3>Popular Use Cases</h3>
+            <ul class="tips-list">
+                <li id="gaming"><strong>Gaming:</strong> Create unique usernames and clan tags</li>
+                <li id="social"><strong>Social Media:</strong> Stand out in posts and comments</li>
+                <li id="art"><strong>Digital Art:</strong> Add text effects to your artwork</li>
+                <li id="writing"><strong>Creative Writing:</strong> Enhance horror or sci-fi stories</li>
+                <li id="design"><strong>Web Design:</strong> Create eye-catching headlines</li>
+                <li id="typography"><strong>Typography Art:</strong> Design modern logo typography with glitch elements</li>
+                <li id="brand"><strong>Brand Identity:</strong> Create unique brand logos with typography focus</li>
+            </ul>
+
+            <h3 id="tips">Usage Tips</h3>
             <ul class="tips-list">
                 <li>Type or paste your text in the input box</li>
                 <li>Select your desired effect from the dropdown menu</li>
                 <li>Adjust the Craziness Level slider to control the effect intensity</li>
                 <li>The effect will be applied automatically</li>
                 <li>Use the copy button to copy the transformed text</li>
+                <li>Save as image for use in graphics and designs</li>
             </ul>
+
+            <h3 id="faq">Frequently Asked Questions</h3>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <h4>Is this tool free to use?</h4>
+                    <p>Yes, our glitch text generator is completely free to use with no limitations or registration required.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Will the glitch text work everywhere?</h4>
+                    <p>Most modern platforms support Unicode characters, but some older systems or applications may not display the effects properly.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I use the generated text commercially?</h4>
+                    <p>Yes, you have full rights to use the text you generate for any purpose, including commercial use.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is my text stored on your servers?</h4>
+                    <p>No, all text processing happens in your browser. We don't store or transmit any of your text data.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="main-footer">
         <div class="container">
-            <p>Made with <i class="fas fa-heart"></i> | <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Glitch Text Generator</h3>
+                    <p>Transform your text into creepy, scary, or cool glitch art styles. Create unique Zalgo text, Matrix effects, and more with our free online tool.</p>
+                    <div class="social-links">
+                        <a href="#" title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Share on Reddit"><i class="fab fa-reddit"></i></a>
+                        <a href="#" title="View on GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#generator">Text Generator</a></li>
+                        <li><a href="#zalgo">Zalgo Text</a></li>
+                        <li><a href="#matrix">Matrix Style</a></li>
+                        <li><a href="#shuffle">Shuffle Glitch</a></li>
+                        <li><a href="#mirror">Mirror Text</a></li>
+                        <li><a href="glitch-logo.html">Glitch Logo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Use Cases</h4>
+                    <ul>
+                        <li><a href="#gaming">Gaming Usernames</a></li>
+                        <li><a href="#social">Social Media</a></li>
+                        <li><a href="#art">Digital Art</a></li>
+                        <li><a href="#writing">Creative Writing</a></li>
+                        <li><a href="#design">Web Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Glitch Text Generator. All rights reserved. Made with <i class="fas fa-heart"></i> for the creative community.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy.html">Privacy</a>
+                        <span class="separator">|</span>
+                        <a href="terms.html">Terms</a>
+                        <span class="separator">|</span>
+                        <a href="cookies.html">Cookies</a>
+                        <span class="separator">|</span>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 

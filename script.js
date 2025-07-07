@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Generate Zalgo text with improved intensity control
-    function zalgoify(text) {
+    function zalgoify(text, customIntensity = null) {
         if (!text) return '';
-        const intensity = parseFloat(intensitySlider.value);
+        const intensity = customIntensity || parseFloat(intensitySlider.value);
         
         return text.split('').map(char => {
             if (char === ' ') return char; // Preserve spaces
@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Matrix style text with improved intensity control
-    function matrixify(text) {
+    function matrixify(text, customIntensity = null) {
         if (!text) return '';
         const matrixChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@#$%^&*';
-        const intensity = parseFloat(intensitySlider.value);
+        const intensity = customIntensity || parseFloat(intensitySlider.value);
         const replacementChance = Math.pow(intensity / 20, 1.2);
         
         return text.split('').map(char => {
@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Shuffle text with improved intensity control
-    function shuffleText(text) {
+    function shuffleText(text, customIntensity = null) {
         if (!text) return '';
-        const intensity = parseFloat(intensitySlider.value);
+        const intensity = customIntensity || parseFloat(intensitySlider.value);
         const shuffleChance = Math.pow(intensity / 20, 1.3);
         const maxOffset = Math.ceil(intensity * 1.5);
         
@@ -103,10 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (newCharCode < 'A'.charCodeAt(0)) newCharCode = 'A'.charCodeAt(0) + (('A'.charCodeAt(0) - newCharCode -1) % 26);
                     if (newCharCode > 'Z'.charCodeAt(0)) newCharCode = 'Z'.charCodeAt(0) - ((newCharCode - 'Z'.charCodeAt(0) -1) % 26);
                 }
-                // If offset is too large and goes out of typical printable ASCII, consider not changing or a different strategy.
-                // For now, this might still produce non-Latin chars if original offset is large.
-                // A stricter approach would be to cap newCharCode to ensure it stays within Latin a-z/A-Z.
-                // The modulo logic above attempts to wrap around within the respective case range.
 
                 return String.fromCharCode(newCharCode);
             }
@@ -127,6 +123,77 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 result = text.split('').reverse().join('') + result;
             }
+        }
+        
+        return result;
+    }
+
+    // Glitch logo effect - Typography-focused with subtle glitch elements
+    function glitchLogo(text) {
+        if (!text) return '';
+        const intensity = parseFloat(intensitySlider.value);
+        
+        // Start with clean typography
+        let result = text.toUpperCase(); // Professional logo style
+        
+        // Apply typography-focused effects
+        if (intensity > 3) {
+            // Add subtle character variations for typography effect
+            result = result.split('').map((char, index) => {
+                if (char === ' ') return char;
+                
+                // Create typography variations based on position
+                const variation = Math.sin(index * 0.5) * (intensity / 10);
+                const shouldVary = Math.random() < (intensity / 20);
+                
+                if (shouldVary && /[A-Z]/.test(char)) {
+                    // Subtle character shifts for typography effect
+                    const charCode = char.charCodeAt(0);
+                    const shift = Math.floor(variation * 2);
+                    const newCharCode = charCode + shift;
+                    
+                    // Keep within reasonable bounds
+                    if (newCharCode >= 65 && newCharCode <= 90) {
+                        return String.fromCharCode(newCharCode);
+                    }
+                }
+                
+                return char;
+            }).join('');
+        }
+        
+        // Add minimal zalgo effect for typography enhancement
+        if (intensity > 5) {
+            const zalgoIntensity = Math.min(intensity / 8, 2); // Very subtle
+            result = zalgoify(result, zalgoIntensity);
+        }
+        
+        // Add typography-specific spacing adjustments
+        if (intensity > 7) {
+            result = result.split('').map((char, index) => {
+                if (char === ' ') return char;
+                
+                // Add subtle spacing variations
+                const spacingVariation = Math.random() < (intensity / 30);
+                if (spacingVariation) {
+                    return char + ' '; // Add small space
+                }
+                return char;
+            }).join('');
+        }
+        
+        // Add typography kerning effects
+        if (intensity > 10) {
+            result = result.split('').map((char, index) => {
+                if (char === ' ') return char;
+                
+                // Create kerning-like effects
+                const kerningEffect = Math.random() < (intensity / 40);
+                if (kerningEffect) {
+                    return char + '\u200B'; // Zero-width space for kerning
+                }
+                return char;
+            }).join('');
         }
         
         return result;
@@ -163,6 +230,9 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'mirror':
                 result = mirrorText(text);
                 break;
+            case 'logo':
+                result = glitchLogo(text);
+                break;
             default:
                 result = text;
         }
@@ -198,111 +268,90 @@ document.addEventListener('DOMContentLoaded', () => {
             const canvas = document.createElement('canvas');
             const ctx = canvas.getContext('2d');
             const currentIntensity = parseFloat(intensitySlider.value);
-
-            let padding = 40;
-            let fontSize = 24;
-
-            // Tiered multiplier for content scaling
-            let canvasContentWidthMultiplier = 1.0;
-            if (currentIntensity > 15) { // Intensity 15.5 - 20
-                canvasContentWidthMultiplier = 1.0 + (currentIntensity - 15) * 0.4; // Scales content width part from 1.0x up to 3.0x (at intensity 20)
-                padding = 60;
-            } else if (currentIntensity > 10) { // Intensity 10.5 - 15
-                canvasContentWidthMultiplier = 1.0 + (currentIntensity - 10) * 0.2; // Scales content width part from 1.0x up to 2.0x (at intensity 15)
-                padding = 50;
-            } else if (currentIntensity > 5) { // Intensity 5.5 - 10
-                canvasContentWidthMultiplier = 1.0 + (currentIntensity - 5) * 0.1; // Scales content width part from 1.0x up to 1.5x (at intensity 10)
-            }
-
-            // Tiered minimum absolute canvas width
-            let minAbsCanvasWidth = 300;
-            if (currentIntensity > 15) { // Intensity 15.5 - 20
-                minAbsCanvasWidth = 400 + (currentIntensity - 15) * 40; // Min canvas width from 400px (at 15) up to 600px (at 20)
-            } else if (currentIntensity > 10) { // Intensity 10.5 - 15
-                minAbsCanvasWidth = 300 + (currentIntensity - 10) * 20; // Min canvas width from 300px (at 10) up to 400px (at 15)
-            } else if (currentIntensity > 5) { // Intensity 5.5 - 10
-                 minAbsCanvasWidth = 300 + (currentIntensity - 5) * 10; // Min canvas width from 300px (at 5) up to 350px (at 10)
-            }
-
-            ctx.font = `${fontSize}px 'Microsoft YaHei', 'SimSun', 'PingFang SC', 'Noto Sans CJK SC', Arial, sans-serif`;
             
-            const textToRender = textContainer.textContent || placeholderText;
-            const lines = textToRender.split('\\n');
-            const lineHeight = fontSize * 1.2;
-
-            const textContentMeasuredWidth = Math.max(1, ...lines.map(line => ctx.measureText(line).width)); // Ensure at least 1px to prevent 0*multiplier
+            // Set canvas size
+            canvas.width = 800;
+            canvas.height = 200;
             
-            const scaledContentWidth = textContentMeasuredWidth * canvasContentWidthMultiplier;
-            const canvasWidthFromContent = scaledContentWidth + (padding * 2);
-            
-            // Final canvas width is the greater of content-derived width or intensity-derived min width
-            const finalCanvasWidth = Math.max(canvasWidthFromContent, minAbsCanvasWidth);
-            const finalCanvasHeight = (lineHeight * lines.length) + (padding * 2);
-
-            canvas.width = finalCanvasWidth;
-            canvas.height = finalCanvasHeight;
-
+            // Set background
             ctx.fillStyle = '#ffffff';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = '#1e293b';
-            ctx.font = `${fontSize}px 'Microsoft YaHei', 'SimSun', 'PingFang SC', 'Noto Sans CJK SC', Arial, sans-serif`;
+            
+            // Set text style
+            ctx.fillStyle = '#000000';
+            ctx.font = '48px Arial, sans-serif';
             ctx.textAlign = 'center';
-
-            const totalTextHeight = lineHeight * lines.length;
-            let startY = padding + (lineHeight - fontSize) / 2; // Base for first line from top padding
-            if (lines.length > 0) { // Adjust to center the whole text block vertically
-                startY = (canvas.height - totalTextHeight) / 2 + (lineHeight - fontSize) / 2; 
+            ctx.textBaseline = 'middle';
+            
+            // Get text and wrap it
+            const text = textContainer.textContent;
+            const maxWidth = canvas.width - 40;
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+            
+            for (let i = 1; i < words.length; i++) {
+                const word = words[i];
+                const width = ctx.measureText(currentLine + ' ' + word).width;
+                if (width < maxWidth) {
+                    currentLine += ' ' + word;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
             }
-            // Ensure text is drawn line by line, accommodating the canvas height
+            lines.push(currentLine);
+            
+            // Draw text
+            const lineHeight = 60;
+            const startY = (canvas.height - (lines.length * lineHeight)) / 2;
+            
             lines.forEach((line, index) => {
-                 // We want to draw baseline of text, calculate from top of where line should be
-                 const lineTopY = (canvas.height - totalTextHeight) / 2 + (index * lineHeight);
-                 const baselineY = lineTopY + fontSize * 0.75; // Approximate baseline position from top of line box (0.75 is empirical for Arial)
-                 ctx.fillText(line, canvas.width / 2, baselineY );
+                ctx.fillText(line, canvas.width / 2, startY + (index * lineHeight));
             });
-
-            const dataUrl = canvas.toDataURL('image/png');
-            const link = document.createElement('a');
-            link.download = 'glitch-text.png';
-            link.href = dataUrl;
-            link.click();
-
-            const originalText = saveImageBtn.innerHTML;
-            saveImageBtn.innerHTML = '<i class="fas fa-check"></i> Saved!';
-            setTimeout(() => {
-                saveImageBtn.innerHTML = originalText;
-            }, 2000);
-
+            
+            // Convert to blob and download
+            canvas.toBlob((blob) => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'glitch-text.png';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+            
         } catch (err) {
             console.error('Failed to save image:', err);
-            saveImageBtn.innerHTML = '<i class="fas fa-times"></i> Failed';
-            setTimeout(() => {
-                saveImageBtn.innerHTML = '<i class="fas fa-image"></i> Save as Image';
-            }, 2000);
+            alert('Failed to save image. Please try again.');
         }
     }
 
     // Event listeners
-    const debouncedGenerate = debounce(generateGlitchText, 150);
-    
-    // Update display and generate text when slider changes
-    intensitySlider.addEventListener('input', () => {
-        sliderValue.textContent = parseFloat(intensitySlider.value).toFixed(1);
+    inputText.addEventListener('input', debounce(generateGlitchText, 100));
+    glitchType.addEventListener('change', generateGlitchText);
+    intensitySlider.addEventListener('input', function() {
+        sliderValue.textContent = this.value;
         generateGlitchText();
     });
-
-    // Generate text when input changes
-    inputText.addEventListener('input', debouncedGenerate);
-    
-    // Generate text when effect type changes
-    glitchType.addEventListener('change', generateGlitchText);
-    
-    // Handle button clicks
     copyBtn.addEventListener('click', copyToClipboard);
     saveImageBtn.addEventListener('click', saveAsImage);
 
-    // Initialize
-    sliderValue.textContent = intensitySlider.value;
+    // Smooth scrolling for footer links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Initialize with default text
     generateGlitchText();
 }); 

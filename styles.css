@@ -76,6 +76,8 @@ body {
     font-size: 0.9rem;
 }
 
+
+
 /* Generator Section */
 .generator-section {
     margin: 4rem 0;
@@ -329,7 +331,7 @@ select:focus {
 
 .effects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
     padding: 0 2rem;
@@ -386,27 +388,149 @@ select:focus {
     font-weight: bold;
 }
 
+/* FAQ Section Styles */
+.faq-section {
+    margin-top: 2rem;
+}
+
+.faq-item {
+    background: var(--background-white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-item h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
 /* Footer Styles */
 .main-footer {
     background: var(--background-light);
-    padding: 1.5rem 2rem;
+    padding: 3rem 2rem 1rem;
     border-top: 1px solid var(--border-color);
     margin-top: 4rem;
 }
 
-.main-footer p {
-    text-align: center;
-    color: var(--text-secondary);
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.main-footer a {
-    color: var(--primary-color);
+.footer-section h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.footer-section h4 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: var(--text-secondary);
     text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-bottom p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-bottom-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
     transition: var(--transition);
 }
 
-.main-footer a:hover {
-    color: var(--primary-hover);
+.footer-bottom-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom-links .separator {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
 }
 
 .main-footer i {
@@ -458,8 +582,19 @@ select:focus {
     }
 
     .main-footer {
-        padding: 1.5rem 1rem;
+        padding: 2rem 1rem 1rem;
         margin-top: 3rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
     }
 
     .effects-grid {
@@ -497,4 +632,14 @@ select:focus {
     .copy-btn, .save-btn {
         width: 100%;
     }
+    
+    .faq-section {
+        padding: 0 1rem;
+    }
+    
+    .faq-item {
+        padding: 1rem;
+    }
+    
+
 } 
