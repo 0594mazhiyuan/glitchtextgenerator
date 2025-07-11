@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站地图 - 故障文字生成器</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .sitemap-section {
+            margin-bottom: 2rem;
+        }
+        .sitemap-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+        }
+        .sitemap-list li {
+            margin-bottom: 0.5rem;
+        }
+        .sitemap-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sitemap-list a:hover {
+            color: var(--primary-color);
+        }
+        .sitemap-list i {
+            color: var(--accent-color);
+            width: 16px;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        .back-home:hover {
+            color: var(--primary-hover);
+        }
+        .language-section {
+            background: var(--background-light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        .language-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .priority-high {
+            border-left: 3px solid var(--success-color);
+            padding-left: 0.5rem;
+        }
+        .priority-medium {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 0.5rem;
+        }
+        .priority-low {
+            border-left: 3px solid var(--text-secondary);
+            padding-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="sitemap-container">
+        <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i>
+            返回故障文字生成器
+        </a>
+        
+        <h1>网站地图</h1>
+        <p>故障文字生成器的完整导航结构 - 所有页面和功能的综合指南</p>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-home"></i> 主要页面</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html"><i class="fas fa-star"></i>主页（故障文字生成器）</a></li>
+                    <li class="priority-high"><a href="font-generator.html"><i class="fas fa-magic"></i>字体生成器工具</a></li>
+                    <li class="priority-high"><a href="glitch-logo.html"><i class="fas fa-font"></i>故障标志生成器</a></li>
+                    <li class="priority-medium"><a href="privacy.html"><i class="fas fa-shield-alt"></i>隐私政策</a></li>
+                    <li class="priority-low"><a href="sitemap.html"><i class="fas fa-sitemap"></i>网站地图</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-globe"></i> 语言版本</h2>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag-usa"></i> English（英语）</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="../index.html"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="../font-generator.html"><i class="fas fa-magic"></i>Font Generator</a></li>
+                        <li><a href="../glitch-logo.html"><i class="fas fa-font"></i>Logo Generator</a></li>
+                        <li><a href="../privacy.html"><i class="fas fa-shield-alt"></i>Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> 中文（简体中文）</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i>主页</a></li>
+                        <li><a href="font-generator.html"><i class="fas fa-magic"></i>字体生成器</a></li>
+                        <li><a href="glitch-logo.html"><i class="fas fa-font"></i>标志生成器</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i>隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> Español（西班牙语）</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="../es/index.html"><i class="fas fa-home"></i>Página Principal</a></li>
+                        <li><a href="../es/font-generator.html"><i class="fas fa-magic"></i>Generador de Fuentes</a></li>
+                        <li><a href="../es/glitch-logo.html"><i class="fas fa-font"></i>Generador de Logo</a></li>
+                        <li><a href="../es/privacy.html"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-palette"></i> 文字效果</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html#zalgo"><i class="fas fa-ghost"></i>Zalgo文字效果</a></li>
+                    <li class="priority-high"><a href="index.html#matrix"><i class="fas fa-code"></i>Matrix风格效果</a></li>
+                    <li class="priority-medium"><a href="index.html#shuffle"><i class="fas fa-random"></i>随机故障效果</a></li>
+                    <li class="priority-medium"><a href="index.html#mirror"><i class="fas fa-mirror"></i>镜像文字效果</a></li>
+                    <li class="priority-high"><a href="index.html#logo"><i class="fas fa-font"></i>排版故障标志</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-font"></i> 字体生成器功能</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="font-generator.html"><i class="fas fa-magic"></i>字体生成器工具</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#unicode"><i class="fas fa-text-height"></i>Unicode字体样式</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#social-media"><i class="fas fa-share-alt"></i>社交媒体字体</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#copy-paste"><i class="fas fa-copy"></i>复制粘贴字体</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#preview"><i class="fas fa-eye"></i>实时预览</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#download"><i class="fas fa-download"></i>下载字体图片</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> 标志生成器功能</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="glitch-logo.html"><i class="fas fa-font"></i>故障标志生成器</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#features"><i class="fas fa-star"></i>标志功能</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>标志示例</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#tutorial"><i class="fas fa-graduation-cap"></i>标志设计教程</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#typography"><i class="fas fa-font"></i>排版样式</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#colors"><i class="fas fa-palette"></i>颜色自定义</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-users"></i> 使用场景</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#gaming"><i class="fas fa-gamepad"></i>游戏用户名</a></li>
+                    <li class="priority-medium"><a href="index.html#social"><i class="fas fa-share-alt"></i>社交媒体</a></li>
+                    <li class="priority-medium"><a href="index.html#art"><i class="fas fa-paint-brush"></i>数字艺术</a></li>
+                    <li class="priority-medium"><a href="index.html#writing"><i class="fas fa-pen"></i>创意写作</a></li>
+                    <li class="priority-medium"><a href="index.html#design"><i class="fas fa-desktop"></i>网页设计</a></li>
+                    <li class="priority-medium"><a href="index.html#typography"><i class="fas fa-font"></i>排版艺术</a></li>
+                    <li class="priority-medium"><a href="index.html#brand"><i class="fas fa-trademark"></i>品牌标识</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> 工具和功能</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html#copy"><i class="fas fa-copy"></i>复制到剪贴板</a></li>
+                    <li class="priority-high"><a href="index.html#save"><i class="fas fa-image"></i>保存为图片</a></li>
+                    <li class="priority-medium"><a href="index.html#intensity"><i class="fas fa-sliders-h"></i>强度控制</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#features"><i class="fas fa-star"></i>标志功能</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>标志示例</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#load-more"><i class="fas fa-plus"></i>加载更多字体</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-info-circle"></i> 信息和帮助</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#about"><i class="fas fa-info"></i>关于故障文字</a></li>
+                    <li class="priority-medium"><a href="index.html#how-it-works"><i class="fas fa-cogs"></i>工作原理</a></li>
+                    <li class="priority-medium"><a href="index.html#tips"><i class="fas fa-lightbulb"></i>使用技巧</a></li>
+                    <li class="priority-medium"><a href="index.html#faq"><i class="fas fa-question-circle"></i>常见问题</a></li>
+                    <li class="priority-low"><a href="privacy.html"><i class="fas fa-shield-alt"></i>隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="sitemap-section">
+            <h2><i class="fas fa-external-link-alt"></i> 外部资源</h2>
+            <ul class="sitemap-list">
+                <li><a href="../sitemap.xml"><i class="fas fa-sitemap"></i>XML网站地图</a></li>
+                <li><a href="../robots.txt"><i class="fas fa-robot"></i>Robots.txt</a></li>
+                <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i>GitHub仓库</a></li>
+                <li><a href="https://glyphy.io/font-generator" target="_blank"><i class="fas fa-external-link-alt"></i>灵感来源：Glyphy</a></li>
+            </ul>
+        </div>
+        
+        <div class="sitemap-section">
+            <h2><i class="fas fa-chart-bar"></i> 网站统计</h2>
+            <ul class="sitemap-list">
+                <li><i class="fas fa-file"></i>总页面数：12+（包括语言版本）</li>
+                <li><i class="fas fa-language"></i>语言：英语、中文、西班牙语</li>
+                <li><i class="fas fa-magic"></i>工具：文字生成器、字体生成器、标志生成器</li>
+                <li><i class="fas fa-palette"></i>效果：5+种故障文字效果</li>
+                <li><i class="fas fa-font"></i>字体：300+种Unicode字体样式</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 
