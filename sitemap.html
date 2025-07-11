@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap - Font Generator</title>
+    <title>Sitemap - Glitch Text Generator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .sitemap-container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -55,108 +55,185 @@
         .back-home:hover {
             color: var(--primary-hover);
         }
+        .language-section {
+            background: var(--background-light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        .language-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .priority-high {
+            border-left: 3px solid var(--success-color);
+            padding-left: 0.5rem;
+        }
+        .priority-medium {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 0.5rem;
+        }
+        .priority-low {
+            border-left: 3px solid var(--text-secondary);
+            padding-left: 0.5rem;
+        }
     </style>
 </head>
 <body>
     <div class="sitemap-container">
         <a href="index.html" class="back-home">
             <i class="fas fa-arrow-left"></i>
-            Back to Font Generator
+            Back to Glitch Text Generator
         </a>
         
         <h1>Sitemap</h1>
-        <p>Complete navigation structure of Font Generator</p>
+        <p>Complete navigation structure of Glitch Text Generator - Your comprehensive guide to all pages and features</p>
         
-        <div class="sitemap-section">
-            <h2><i class="fas fa-home"></i> Main Pages</h2>
-            <ul class="sitemap-list">
-                <li><a href="index.html"><i class="fas fa-star"></i>Home Page</a></li>
-                <li><a href="font-generator.html"><i class="fas fa-magic"></i>Font Generator Tool</a></li>
-                <li><a href="glitch-logo.html"><i class="fas fa-font"></i>Glitch Logo Generator</a></li>
-                <li><a href="index.html#faq"><i class="fas fa-question-circle"></i>Frequently Asked Questions</a></li>
-            </ul>
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-home"></i> Main Pages</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html"><i class="fas fa-star"></i>Home Page (Glitch Text Generator)</a></li>
+                    <li class="priority-high"><a href="font-generator.html"><i class="fas fa-magic"></i>Font Generator Tool</a></li>
+                    <li class="priority-high"><a href="glitch-logo.html"><i class="fas fa-font"></i>Glitch Logo Generator</a></li>
+                    <li class="priority-medium"><a href="privacy.html"><i class="fas fa-shield-alt"></i>Privacy Policy</a></li>
+                    <li class="priority-low"><a href="sitemap.html"><i class="fas fa-sitemap"></i>Sitemap</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-globe"></i> Language Versions</h2>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag-usa"></i> English (Default)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="font-generator.html"><i class="fas fa-magic"></i>Font Generator</a></li>
+                        <li><a href="glitch-logo.html"><i class="fas fa-font"></i>Logo Generator</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i>Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> 中文 (Chinese)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="zh/index.html"><i class="fas fa-home"></i>主页</a></li>
+                        <li><a href="zh/font-generator.html"><i class="fas fa-magic"></i>字体生成器</a></li>
+                        <li><a href="zh/glitch-logo.html"><i class="fas fa-font"></i>标志生成器</a></li>
+                        <li><a href="zh/privacy.html"><i class="fas fa-shield-alt"></i>隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> Español (Spanish)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="es/index.html"><i class="fas fa-home"></i>Página Principal</a></li>
+                        <li><a href="es/font-generator.html"><i class="fas fa-magic"></i>Generador de Fuentes</a></li>
+                        <li><a href="es/glitch-logo.html"><i class="fas fa-font"></i>Generador de Logo</a></li>
+                        <li><a href="es/privacy.html"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         
-        <div class="sitemap-section">
-            <h2><i class="fas fa-palette"></i> Text Effects</h2>
-            <ul class="sitemap-list">
-                <li><a href="index.html#zalgo"><i class="fas fa-ghost"></i>Zalgo Text Effect</a></li>
-                <li><a href="index.html#matrix"><i class="fas fa-code"></i>Matrix Style Effect</a></li>
-                <li><a href="index.html#shuffle"><i class="fas fa-random"></i>Shuffle Glitch Effect</a></li>
-                <li><a href="index.html#mirror"><i class="fas fa-mirror"></i>Mirror Text Effect</a></li>
-                <li><a href="index.html#logo"><i class="fas fa-font"></i>Typography Glitch Logo</a></li>
-            </ul>
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-palette"></i> Text Effects</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html#zalgo"><i class="fas fa-ghost"></i>Zalgo Text Effect</a></li>
+                    <li class="priority-high"><a href="index.html#matrix"><i class="fas fa-code"></i>Matrix Style Effect</a></li>
+                    <li class="priority-medium"><a href="index.html#shuffle"><i class="fas fa-random"></i>Shuffle Glitch Effect</a></li>
+                    <li class="priority-medium"><a href="index.html#mirror"><i class="fas fa-mirror"></i>Mirror Text Effect</a></li>
+                    <li class="priority-high"><a href="index.html#logo"><i class="fas fa-font"></i>Typography Glitch Logo</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-font"></i> Font Generator Features</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="font-generator.html"><i class="fas fa-magic"></i>Font Generator Tool</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#unicode"><i class="fas fa-text-height"></i>Unicode Font Styles</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#social-media"><i class="fas fa-share-alt"></i>Social Media Fonts</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#copy-paste"><i class="fas fa-copy"></i>Copy & Paste Fonts</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#preview"><i class="fas fa-eye"></i>Real-time Preview</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#download"><i class="fas fa-download"></i>Download Font Images</a></li>
+                </ul>
+            </div>
         </div>
         
-        <div class="sitemap-section">
-            <h2><i class="fas fa-font"></i> Font Generator</h2>
-            <ul class="sitemap-list">
-                <li><a href="font-generator.html"><i class="fas fa-magic"></i>Font Generator Tool</a></li>
-                <li><a href="font-generator.html#unicode"><i class="fas fa-text-height"></i>Unicode Font Styles</a></li>
-                <li><a href="font-generator.html#social-media"><i class="fas fa-share-alt"></i>Social Media Fonts</a></li>
-                <li><a href="font-generator.html#copy-paste"><i class="fas fa-copy"></i>Copy & Paste Fonts</a></li>
-            </ul>
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> Logo Generator Features</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="glitch-logo.html"><i class="fas fa-font"></i>Glitch Logo Generator</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#features"><i class="fas fa-star"></i>Logo Features</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>Logo Examples</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#tutorial"><i class="fas fa-graduation-cap"></i>Logo Design Tutorial</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#typography"><i class="fas fa-font"></i>Typography Styles</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#colors"><i class="fas fa-palette"></i>Color Customization</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-users"></i> Use Cases</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#gaming"><i class="fas fa-gamepad"></i>Gaming Usernames</a></li>
+                    <li class="priority-medium"><a href="index.html#social"><i class="fas fa-share-alt"></i>Social Media</a></li>
+                    <li class="priority-medium"><a href="index.html#art"><i class="fas fa-paint-brush"></i>Digital Art</a></li>
+                    <li class="priority-medium"><a href="index.html#writing"><i class="fas fa-pen"></i>Creative Writing</a></li>
+                    <li class="priority-medium"><a href="index.html#design"><i class="fas fa-desktop"></i>Web Design</a></li>
+                    <li class="priority-medium"><a href="index.html#typography"><i class="fas fa-font"></i>Typography Art</a></li>
+                    <li class="priority-medium"><a href="index.html#brand"><i class="fas fa-trademark"></i>Brand Identity</a></li>
+                </ul>
+            </div>
         </div>
         
-        <div class="sitemap-section">
-            <h2><i class="fas fa-tools"></i> Dedicated Tools</h2>
-            <ul class="sitemap-list">
-                <li><a href="glitch-logo.html"><i class="fas fa-font"></i>Glitch Logo Generator</a></li>
-                <li><a href="glitch-logo.html#features"><i class="fas fa-star"></i>Logo Features</a></li>
-                <li><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>Logo Examples</a></li>
-                <li><a href="glitch-logo.html#tutorial"><i class="fas fa-graduation-cap"></i>Logo Design Tutorial</a></li>
-            </ul>
-        </div>
-        
-        <div class="sitemap-section">
-            <h2><i class="fas fa-users"></i> Use Cases</h2>
-            <ul class="sitemap-list">
-                <li><a href="index.html#gaming"><i class="fas fa-gamepad"></i>Gaming Usernames</a></li>
-                <li><a href="index.html#social"><i class="fas fa-share-alt"></i>Social Media</a></li>
-                <li><a href="index.html#art"><i class="fas fa-paint-brush"></i>Digital Art</a></li>
-                <li><a href="index.html#writing"><i class="fas fa-pen"></i>Creative Writing</a></li>
-                <li><a href="index.html#design"><i class="fas fa-desktop"></i>Web Design</a></li>
-                <li><a href="index.html#typography"><i class="fas fa-font"></i>Typography Art</a></li>
-                <li><a href="index.html#brand"><i class="fas fa-trademark"></i>Brand Identity</a></li>
-            </ul>
-        </div>
-        
-        <div class="sitemap-section">
-            <h2><i class="fas fa-tools"></i> Tools & Features</h2>
-            <ul class="sitemap-list">
-                <li><a href="index.html#copy"><i class="fas fa-copy"></i>Copy to Clipboard</a></li>
-                <li><a href="index.html#save"><i class="fas fa-image"></i>Save as Image</a></li>
-                <li><a href="index.html#intensity"><i class="fas fa-sliders-h"></i>Intensity Control</a></li>
-                <li><a href="glitch-logo.html#features"><i class="fas fa-star"></i>Logo Features</a></li>
-                <li><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>Logo Examples</a></li>
-            </ul>
-        </div>
-        
-        <div class="sitemap-section">
-            <h2><i class="fas fa-info-circle"></i> Information</h2>
-            <ul class="sitemap-list">
-                <li><a href="index.html#about"><i class="fas fa-info"></i>About Glitch Text</a></li>
-                <li><a href="index.html#how-it-works"><i class="fas fa-cogs"></i>How It Works</a></li>
-                <li><a href="index.html#tips"><i class="fas fa-lightbulb"></i>Usage Tips</a></li>
-            </ul>
-        </div>
-        
-        <div class="sitemap-section">
-            <h2><i class="fas fa-file-alt"></i> Legal & Support</h2>
-            <ul class="sitemap-list">
-                <li><a href="#privacy"><i class="fas fa-shield-alt"></i>Privacy Policy</a></li>
-                <li><a href="#terms"><i class="fas fa-file-contract"></i>Terms of Service</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i>Contact Us</a></li>
-                <li><a href="#feedback"><i class="fas fa-comment"></i>Feedback</a></li>
-            </ul>
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> Tools & Features</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html#copy"><i class="fas fa-copy"></i>Copy to Clipboard</a></li>
+                    <li class="priority-high"><a href="index.html#save"><i class="fas fa-image"></i>Save as Image</a></li>
+                    <li class="priority-medium"><a href="index.html#intensity"><i class="fas fa-sliders-h"></i>Intensity Control</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#features"><i class="fas fa-star"></i>Logo Features</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>Logo Examples</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#load-more"><i class="fas fa-plus"></i>Load More Fonts</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-info-circle"></i> Information & Help</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#about"><i class="fas fa-info"></i>About Glitch Text</a></li>
+                    <li class="priority-medium"><a href="index.html#how-it-works"><i class="fas fa-cogs"></i>How It Works</a></li>
+                    <li class="priority-medium"><a href="index.html#tips"><i class="fas fa-lightbulb"></i>Usage Tips</a></li>
+                    <li class="priority-medium"><a href="index.html#faq"><i class="fas fa-question-circle"></i>Frequently Asked Questions</a></li>
+                    <li class="priority-low"><a href="privacy.html"><i class="fas fa-shield-alt"></i>Privacy Policy</a></li>
+                </ul>
+            </div>
         </div>
         
         <div class="sitemap-section">
             <h2><i class="fas fa-external-link-alt"></i> External Resources</h2>
             <ul class="sitemap-list">
-                <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i>GitHub Repository</a></li>
                 <li><a href="sitemap.xml"><i class="fas fa-sitemap"></i>XML Sitemap</a></li>
                 <li><a href="robots.txt"><i class="fas fa-robot"></i>Robots.txt</a></li>
+                <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i>GitHub Repository</a></li>
+                <li><a href="https://glyphy.io/font-generator" target="_blank"><i class="fas fa-external-link-alt"></i>Inspired by Glyphy</a></li>
+            </ul>
+        </div>
+        
+        <div class="sitemap-section">
+            <h2><i class="fas fa-chart-bar"></i> Site Statistics</h2>
+            <ul class="sitemap-list">
+                <li><i class="fas fa-file"></i>Total Pages: 12+ (including language versions)</li>
+                <li><i class="fas fa-language"></i>Languages: English, Chinese, Spanish</li>
+                <li><i class="fas fa-magic"></i>Tools: Text Generator, Font Generator, Logo Generator</li>
+                <li><i class="fas fa-palette"></i>Effects: 5+ glitch text effects</li>
+                <li><i class="fas fa-font"></i>Fonts: 300+ Unicode font styles</li>
             </ul>
         </div>
     </div>

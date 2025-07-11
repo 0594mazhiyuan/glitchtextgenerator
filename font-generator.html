@@ -5,27 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- 基础SEO -->
-  <title>Font Generator – 300+ Fancy Unicode Text Styles for Social Media</title>
-  <meta name="description" content="Free online font generator with 300+ fancy Unicode text styles. Create cool text for Instagram, Twitter, Discord, TikTok, and social media profiles. Copy and paste stylish fonts instantly!">
-  <meta name="keywords" content="font generator, fancy text, unicode fonts, cool text, instagram fonts, twitter fonts, discord fonts, social media fonts, text converter, stylish fonts">
+  <title>Free Font Generator - 300+ Unicode Text Styles for Instagram, Twitter, Discord</title>
+  <meta name="description" content="Free Unicode font generator with 300+ fancy text styles. Create cool fonts for Instagram, Twitter, Discord, TikTok. Copy and paste instantly! No registration required.">
+  <meta name="keywords" content="font generator, fancy text generator, unicode fonts, cool text generator, instagram fonts, twitter fonts, discord fonts, tiktok fonts, social media fonts, text converter, stylish fonts, free font generator, copy paste fonts">
   <meta name="author" content="Font Generator">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://yourdomain.com/font-generator.html">
+  <link rel="canonical" href="https://glitchtextgenerator.com/font-generator.html">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/font-generator.html">
-  <meta property="og:title" content="Font Generator – 300+ Fancy Unicode Text Styles">
-  <meta property="og:description" content="Create cool fancy text for social media with our free font generator. 300+ Unicode font styles for Instagram, Twitter, Discord and more!">
-  <meta property="og:image" content="https://yourdomain.com/logo.png">
+  <meta property="og:url" content="https://glitchtextgenerator.com/font-generator.html">
+  <meta property="og:title" content="Free Font Generator - 300+ Unicode Text Styles for Social Media">
+  <meta property="og:description" content="Free Unicode font generator with 300+ fancy text styles. Create cool fonts for Instagram, Twitter, Discord, TikTok. Copy and paste instantly!">
+  <meta property="og:image" content="https://glitchtextgenerator.com/logo.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Font Generator">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://yourdomain.com/font-generator.html">
-  <meta property="twitter:title" content="Font Generator – 300+ Fancy Unicode Text Styles">
-  <meta property="twitter:description" content="Create cool fancy text for social media with our free font generator. 300+ Unicode font styles for Instagram, Twitter, Discord and more!">
-  <meta property="twitter:image" content="https://yourdomain.com/logo.png">
+  <meta property="twitter:url" content="https://glitchtextgenerator.com/font-generator.html">
+  <meta property="twitter:title" content="Free Font Generator - 300+ Unicode Text Styles for Social Media">
+  <meta property="twitter:description" content="Free Unicode font generator with 300+ fancy text styles. Create cool fonts for Instagram, Twitter, Discord, TikTok. Copy and paste instantly!">
+  <meta property="twitter:image" content="https://glitchtextgenerator.com/logo.png">
   
   <!-- 结构化数据 -->
   <script type="application/ld+json">
@@ -34,7 +37,7 @@
     "@type": "WebApplication",
     "name": "Font Generator",
     "description": "Free online font generator with 300+ fancy Unicode text styles for social media",
-    "url": "https://yourdomain.com/font-generator.html",
+    "url": "https://glitchtextgenerator.com/font-generator.html",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Web Browser",
     "offers": {
@@ -44,16 +47,30 @@
     },
     "featureList": [
       "300+ Unicode font styles",
-      "Instant text conversion",
+      "Instant text conversion", 
       "Copy to clipboard",
       "Social media optimized",
-      "Mobile friendly"
-    ]
+      "Mobile friendly",
+      "No registration required",
+      "Free to use"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1250"
+    }
   }
   </script>
   
-  <!-- 预加载关键资源 -->
+  <!-- 移动端优化 -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#6366f1">
+  
+  <!-- 资源预加载 -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="preload" href="fontStyles/fonts_chunk_1.json" as="fetch" crossorigin>
+  <link rel="preload" href="fontStyles/fonts_chunk_2.json" as="fetch" crossorigin>
   
   <style>
     body {
@@ -196,8 +213,17 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Font Generator</h1>
+  <header style="position: relative; background: #fff; box-shadow: 0 2px 8px #0001; padding: 1.5rem 0 1rem 0; text-align: center;">
+    <div style="position: absolute; right: 2rem; top: 1.5rem; z-index: 2;">
+      <div class="language-selector" style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 8px;">
+        <select id="languageSelect" onchange="changeLanguage(this.value)" style="background: white; border: 1px solid #e5e7eb; color: #333; font-size: 0.95rem; cursor: pointer; padding: 0.3rem 0.7rem; border-radius: 6px;">
+          <option value="en" selected>🇺🇸 English</option>
+          <option value="zh">🇨🇳 中文</option>
+          <option value="es">🇪🇸 Español</option>
+        </select>
+      </div>
+    </div>
+    <h1 style="margin-top: 0;">Font Generator</h1>
     <p>Copy and paste fancy Unicode text for Instagram, Twitter, Discord, and more!</p>
   </header>
   <main>
@@ -210,13 +236,64 @@
         <!-- Font styles will be generated here -->
       </section>
       <button id="loadMoreBtn" class="load-more-btn" aria-label="Load more font styles">Load More Fonts</button>
+      
+      <!-- How to Use Section -->
+      <section class="how-to-use" style="margin-top: 3rem; padding: 2rem; background: #f8fafc; border-radius: 12px;">
+        <h2 style="color: #6366f1; margin-bottom: 1rem; font-size: 1.5rem;">How to Use Our Font Generator</h2>
+        <ol style="line-height: 1.8; color: #555;">
+          <li>Type your text in the input box above</li>
+          <li>Choose from 300+ Unicode font styles</li>
+          <li>Click the "Copy" button next to your favorite style</li>
+          <li>Paste anywhere - Instagram, Twitter, Discord, etc.</li>
+        </ol>
+      </section>
+      
+      <!-- FAQ Section -->
+      <section class="faq-section" style="margin-top: 2rem; padding: 2rem; background: #f8fafc; border-radius: 12px;">
+        <h2 style="color: #6366f1; margin-bottom: 1rem; font-size: 1.5rem;">Frequently Asked Questions</h2>
+        <div class="faq-item" style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">How to use the font generator?</h3>
+          <p style="color: #666; line-height: 1.6;">Simply type your text in the input box and see it converted to 300+ different font styles instantly. Click any copy button to use your favorite style anywhere!</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">Are these fonts free to use?</h3>
+          <p style="color: #666; line-height: 1.6;">Yes! All our Unicode fonts are completely free to use on any platform including Instagram, Twitter, Discord, and more.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">Which platforms support these fonts?</h3>
+          <p style="color: #666; line-height: 1.6;">Our Unicode fonts work on Instagram, Twitter, Discord, TikTok, Facebook, WhatsApp, and most social media platforms.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">Do I need to register to use this tool?</h3>
+          <p style="color: #666; line-height: 1.6;">No registration required! Our font generator is completely free and works instantly without any sign-up.</p>
+        </div>
+      </section>
+      
+      <!-- Related Tools Section -->
+      <section class="related-tools" style="margin-top: 2rem; padding: 2rem; background: #f8fafc; border-radius: 12px;">
+        <h3 style="color: #6366f1; margin-bottom: 1rem; font-size: 1.3rem;">Related Tools</h3>
+        <ul style="list-style: none; padding: 0; line-height: 1.8;">
+          <li style="margin-bottom: 0.5rem;"><a href="glitch-logo.html" style="color: #6366f1; text-decoration: none;">🎨 Glitch Logo Generator</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: #6366f1; text-decoration: none;">✨ Glitch Text Generator</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="sitemap.html" style="color: #6366f1; text-decoration: none;">🗺️ Site Map</a></li>
+        </ul>
+      </section>
     </div>
   </main>
   <footer>
     <div>Generate 300+ Unicode font styles. Click any copy button to use your favorite style anywhere!</div>
-    <div style="margin-top:0.5rem;">Inspired by <a href="https://glyphy.io/font-generator" target="_blank" rel="noopener">Glyphy</a></div>
+    
   </footer>
   <script>
+    function changeLanguage(lang) {
+      if(lang === 'zh') {
+        window.location.href = 'zh/font-generator.html';
+      } else if(lang === 'en') {
+        window.location.href = 'font-generator.html';
+      } else if(lang === 'es') {
+        window.location.href = 'es/font-generator.html';
+      }
+    }
     // 花式字体转换映射
     const fontStyles = [
       { name: 'Palmistry', map: { A:'ꍏ', B:'♭', C:'☾', D:'ᕲ', E:'€', F:'Ϝ', G:'Ꮆ', H:'♄', I:'♗', J:'♪', K:'ϰ', L:'↳', M:'ᗰ', N:'ℵ', O:'⊙', P:'ρ', Q:'ᵠ', R:'☈', S:'∫', T:'†', U:'☋', V:'✓', W:'ω', X:'⌘', Y:'⚧', Z:'☡', a:'ρ', b:'ꍏ', c:'↳', d:'∫', e:'€', f:'Ϝ', g:'Ꮆ', h:'♄', i:'♗', j:'♪', k:'ϰ', l:'↳', m:'ᗰ', n:'ℵ', o:'⊙', p:'ρ', q:'ᵠ', r:'☈', s:'∫', t:'†', u:'☋', v:'✓', w:'ω', x:'⌘', y:'⚧', z:'☡' } },

@@ -79,15 +79,26 @@
     <header class="main-header">
         <div class="container">
             <div class="header-content">
-                <svg id="siteLogo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Glitch Text Generator Logo">
-                    <title>Glitch Text Generator Logo</title>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C68.9381 90 84.8059 76.7041 88.8385 60H70C66.6863 60 60 66.6863 60 70C60 73.3137 53.3137 80 50 80C38.9543 80 30 71.0457 30 60C30 48.9543 38.9543 40 50 40C53.8663 40 57.4048 41.0801 60.3436 42.899L65 35H50C45 35 45 45 45 45V55H70V50C70 46.6863 73.3137 40 80 40C82.7614 40 85 42.2386 85 45C85 47.7614 82.7614 50 80 50H75L90 50C90 27.9086 72.0914 10 50 10ZM75 60V55H80C82.7614 55 85 52.7614 85 50C85 47.2386 82.7614 45 80 45H78L78 42C78 38.6863 75.3137 30 68 30C63.0017 30 58.5288 32.1003 55.5087 35.1701L50.8903 31.8816C57.5598 24.5852 67.6431 20 78 20C89.0457 20 90 28.9543 90 30V40L88.8385 40H70V30H65V25L60.3436 27.101C57.4048 23.9199 53.8663 20 50 20C33.4315 20 20 33.4315 20 50C20 66.5685 33.4315 80 50 80C59.9484 80 68.4838 74.6219 73.3168 66.5H88.8385C84.8059 83.2959 68.9381 90 50 90C27.9086 90 10 72.0914 10 50C10 27.9086 27.9086 10 50 10Z"
-                          fill="currentColor"/>
-                </svg>
-                <h1>Glitch Text Generator</h1>
+                <div class="header-top">
+                    <div class="header-left">
+                        <svg id="siteLogo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Glitch Text Generator Logo">
+                            <title>Glitch Text Generator Logo</title>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C68.9381 90 84.8059 76.7041 88.8385 60H70C66.6863 60 60 66.6863 60 70C60 73.3137 53.3137 80 50 80C38.9543 80 30 71.0457 30 60C30 48.9543 38.9543 40 50 40C53.8663 40 57.4048 41.0801 60.3436 42.899L65 35H50C45 35 45 45 45 45V55H70V50C70 46.6863 73.3137 40 80 40C82.7614 40 85 42.2386 85 45C85 47.7614 82.7614 50 80 50H75L90 50C90 27.9086 72.0914 10 50 10ZM75 60V55H80C82.7614 55 85 52.7614 85 50C85 47.2386 82.7614 45 80 45H78L78 42C78 38.6863 75.3137 30 68 30C63.0017 30 58.5288 32.1003 55.5087 35.1701L50.8903 31.8816C57.5598 24.5852 67.6431 20 78 20C89.0457 20 90 28.9543 90 30V40L88.8385 40H70V30H65V25L60.3436 27.101C57.4048 23.9199 53.8663 20 50 20C33.4315 20 20 33.4315 20 50C20 66.5685 33.4315 80 50 80C59.9484 80 68.4838 74.6219 73.3168 66.5H88.8385C84.8059 83.2959 68.9381 90 50 90C27.9086 90 10 72.0914 10 50C10 27.9086 27.9086 10 50 10Z"
+                                  fill="currentColor"/>
+                        </svg>
+                        <h1>Glitch Text Generator</h1>
+                    </div>
+                    <div class="language-selector">
+                        <select id="languageSelect" onchange="changeLanguage(this.value)">
+                            <option value="en" selected>🇺🇸 English</option>
+                            <option value="zh">🇨🇳 中文</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="subtitle">Transform your text into creepy, scary, or cool glitch art styles, inspired by Zalgo.</p>
             </div>
-            <p class="subtitle">Transform your text into creepy, scary, or cool glitch art styles, inspired by Zalgo.</p>
         </div>
     </header>
 
@@ -293,5 +304,16 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function changeLanguage(language) {
+            if (language === 'zh') {
+                window.location.href = 'zh/index.html';
+            } else if (language === 'en') {
+                window.location.href = 'index.html';
+            } else if (language === 'es') {
+                window.location.href = 'es/index.html';
+            }
+        }
+    </script>
 </body>
 </html> 
