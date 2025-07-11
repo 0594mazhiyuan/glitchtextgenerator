@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Generador de Logo Glitch - Crea Diseños de Logo Tipográficos Online</title>
+    <meta name="description" content="Crea logos glitch profesionales enfocados en tipografía con nuestro generador de logo especializado. Diseña logos de marca modernos con elementos glitch sutiles, variaciones de caracteres y efectos de espaciado.">
+    <meta name="keywords" content="generador de logo glitch, logo tipográfico, diseño de logo, logo de marca, tipografía glitch, creador de logo, arte tipográfico, logo de arte glitch, creador de logo gratuito online, herramienta de diseño de logo tipográfico, creador de logo moderno, diseño de identidad de marca, efectos tipográficos de logo, generador de logo profesional">
+    <meta name="author" content="Generador de Logo Glitch">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Generador de Logo Glitch - Crea Diseños de Logo Tipográficos Online">
+    <meta property="og:description" content="Crea logos glitch profesionales enfocados en tipografía con elementos glitch sutiles y diseño moderno.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glitchtextgenerator.com/glitch-logo.html">
+    <meta property="og:image" content="https://glitchtextgenerator.com/logo.png">
+    <meta property="og:site_name" content="Generador de Logo Glitch">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Generador de Logo Glitch - Diseñador de Logo Tipográfico">
+    <meta name="twitter:description" content="Crea logos glitch profesionales con enfoque en tipografía y elementos de diseño moderno.">
+    <meta name="twitter:image" content="https://glitchtextgenerator.com/logo.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Glitch Logo Generator",
+      "description": "Specialized tool for creating typography-focused glitch logos with professional design elements.",
+      "url": "https://glitchtextgenerator.com/glitch-logo.html",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Typography Logo Design",
+        "Character Variations",
+        "Kerning Effects",
+        "Spacing Adjustments",
+        "Professional Typography",
+        "Glitch Elements",
+        "Logo Export",
+        "Custom Color Options",
+        "Multiple Font Styles",
+        "High-Resolution Download"
+      ],
+      "creator": {
+        "@type": "Organization",
+        "name": "Glitch Logo Generator"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "156"
+      },
+      "screenshot": "https://glitchtextgenerator.com/logo.png",
+      "softwareVersion": "1.0",
+      "datePublished": "2024-01-15",
+      "dateModified": "2024-01-15"
+    }
+    </script>
+    
+    <!-- Additional Structured Data for How-To -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Create Professional Glitch Logos",
+      "description": "Step-by-step guide to create professional glitch logos using our online tool",
+      "image": "https://glitchtextgenerator.com/logo.png",
+      "totalTime": "PT5M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Enter your brand name",
+          "text": "Type your brand name or logo text in the input field"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Choose typography style",
+          "text": "Select from Modern, Bold, Elegant, or Tech typography styles"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Adjust intensity",
+          "text": "Use the slider to control the glitch effect intensity"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Customize colors",
+          "text": "Choose custom colors for text and background"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Download logo",
+          "text": "Export your logo as a high-resolution PNG image"
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="../logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link rel="canonical" href="https://glitchtextgenerator.com/glitch-logo.html">
+    <link rel="alternate" hreflang="en" href="https://glitchtextgenerator.com/glitch-logo.html">
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    
+    <style>
+        /* Logo Generator Specific Styles - Updated to match index.html */
+        .logo-generator {
+            background: var(--background-light);
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        
+        .logo-header {
+            text-align: center;
+            color: var(--text-primary);
+            margin-bottom: 3rem;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+        
+        .logo-header h1 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-header p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .logo-workspace {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--background-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+        
+        .logo-controls {
+            background: var(--background-light);
+            padding: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .control-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .control-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo-input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-weight: 600;
+            transition: var(--transition);
+            background: var(--background-white);
+            color: var(--text-primary);
+        }
+        
+        .logo-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        
+        .logo-preview {
+            padding: 3rem;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--background-white);
+        }
+        
+        .logo-display {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-primary);
+            max-width: 100%;
+            word-wrap: break-word;
+            transition: var(--transition);
+        }
+        
+        .logo-actions {
+            padding: 2rem;
+            background: var(--background-light);
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo-btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo-btn.primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .logo-btn.primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+        
+        .logo-btn.secondary {
+            background: var(--background-lighter);
+            color: var(--text-primary);
+        }
+        
+        .logo-btn.secondary:hover {
+            background: var(--border-color);
+        }
+        
+        .logo-btn.success {
+            background: var(--success-color);
+            color: white;
+        }
+        
+        .logo-btn.success:hover {
+            background: #059669;
+        }
+        
+        /* Color picker styles */
+        .color-picker {
+            width: 60px;
+            height: 40px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            background: none;
+        }
+        
+        .color-picker::-webkit-color-swatch-wrapper {
+            padding: 0;
+        }
+        
+        .color-picker::-webkit-color-swatch {
+            border: none;
+            border-radius: 6px;
+        }
+        
+        .color-presets {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .color-preset, .bg-preset {
+            width: 32px;
+            height: 32px;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .color-preset:hover, .bg-preset:hover {
+            transform: scale(1.1);
+            border-color: var(--primary-color);
+        }
+        
+        .color-preset.active, .bg-preset.active {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+        }
+        
+        /* Style buttons */
+        .style-btn {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background: var(--background-white);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .style-btn:hover {
+            border-color: var(--primary-color);
+            background: var(--background-light);
+        }
+        
+        .style-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        /* Slider styles */
+        .slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--border-color);
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            border: none;
+        }
+        
+        @media (max-width: 768px) {
+            .logo-header h1 {
+                font-size: 2rem;
+            }
+            
+            .logo-display {
+                font-size: 2.5rem;
+            }
+            
+            .logo-actions {
+                flex-direction: column;
+            }
+            
+            .logo-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .color-presets {
+                gap: 0.3rem;
+            }
+            
+            .color-preset, .bg-preset {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-top">
+                    <div class="header-left">
+                        <svg id="siteLogo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Glitch Logo Generator Logo">
+                            <title>Glitch Logo Generator Logo</title>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C68.9381 90 84.8059 76.7041 88.8385 60H70C66.6863 60 60 66.6863 60 70C60 73.3137 53.3137 80 50 80C38.9543 80 30 71.0457 30 60C30 48.9543 38.9543 40 50 40C53.8663 40 57.4048 41.0801 60.3436 42.899L65 35H50C45 35 45 45 45 45V55H70V50C70 46.6863 73.3137 40 80 40C82.7614 40 85 42.2386 85 45C85 47.7614 82.7614 50 80 50H75L90 50C90 27.9086 72.0914 10 50 10ZM75 60V55H80C82.7614 55 85 52.7614 85 50C85 47.2386 82.7614 45 80 45H78L78 42C78 38.6863 75.3137 30 68 30C63.0017 30 58.5288 32.1003 55.5087 35.1701L50.8903 31.8816C57.5598 24.5852 67.6431 20 78 20C89.0457 20 90 28.9543 90 30V40L88.8385 40H70V30H65V25L60.3436 27.101C57.4048 23.9199 53.8663 20 50 20C33.4315 20 20 33.4315 20 50C20 66.5685 33.4315 80 50 80C59.9484 80 68.4838 74.6219 73.3168 66.5H88.8385C84.8059 83.2959 68.9381 90 50 90C27.9086 90 10 72.0914 10 50C10 27.9086 27.9086 10 50 10Z"
+                                  fill="currentColor"/>
+                        </svg>
+                        <h1>Generador de Logo Glitch</h1>
+                    </div>
+                    <div class="language-selector">
+                        <select id="languageSelect" onchange="changeLanguage(this.value)">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="zh">🇨🇳 中文</option>
+                            <option value="es" selected>🇪🇸 Español</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="subtitle">Crea logos profesionales enfocados en tipografía con elementos glitch sutiles. Perfecto para marcas modernas, juegos y proyectos creativos.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="logo-workspace">
+            <div class="logo-controls">
+                    <div class="control-group">
+                        <label for="logoText">Tu Texto de Logo</label>
+                        <input type="text" id="logoText" class="logo-input" placeholder="Ingresa tu nombre de marca o texto de logo..." value="GLITCH LOGO">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="logoIntensity">Intensidad Tipográfica</label>
+                                                 <div style="display: flex; align-items: center; gap: 1rem;">
+                             <input type="range" id="logoIntensity" min="0" max="20" value="0" step="0.5" class="slider" style="flex: 1;">
+                             <span id="intensityValue" style="font-weight: 600; color: #374151; min-width: 40px;">0</span>
+                         </div>
+                                                 <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #6b7280; margin-top: 0.5rem;">
+                             <span>Ninguno</span>
+                             <span>Sutil</span>
+                             <span>Profesional</span>
+                             <span>Creativo</span>
+                         </div>
+                    </div>
+                    
+                                         <div class="control-group">
+                         <label>Estilo Tipográfico</label>
+                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 0.5rem;">
+                             <button class="style-btn" data-style="modern">Moderno</button>
+                             <button class="style-btn" data-style="bold">Negrita</button>
+                             <button class="style-btn active" data-style="elegant">Elegante</button>
+                             <button class="style-btn" data-style="tech">Tecnología</button>
+                         </div>
+                     </div>
+                     
+                     <div class="control-group">
+                         <label for="logoColor">Color del Logo</label>
+                         <div style="display: flex; align-items: center; gap: 1rem; margin-top: 0.5rem;">
+                             <input type="color" id="logoColor" value="#1f2937" class="color-picker">
+                             <div class="color-presets">
+                                 <button class="color-preset" data-color="#1f2937" style="background: #1f2937;" title="Gris Oscuro"></button>
+                                 <button class="color-preset" data-color="#000000" style="background: #000000;" title="Negro"></button>
+                                 <button class="color-preset" data-color="#3b82f6" style="background: #3b82f6;" title="Azul"></button>
+                                 <button class="color-preset" data-color="#10b981" style="background: #10b981;" title="Verde"></button>
+                                 <button class="color-preset" data-color="#f59e0b" style="background: #f59e0b;" title="Naranja"></button>
+                                 <button class="color-preset" data-color="#ef4444" style="background: #ef4444;" title="Rojo"></button>
+                                 <button class="color-preset" data-color="#8b5cf6" style="background: #8b5cf6;" title="Púrpura"></button>
+                                 <button class="color-preset" data-color="#ec4899" style="background: #ec4899;" title="Rosa"></button>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="control-group">
+                         <label for="logoBackground">Color de Fondo</label>
+                         <div style="display: flex; align-items: center; gap: 1rem; margin-top: 0.5rem;">
+                             <input type="color" id="logoBackground" value="#ffffff" class="color-picker">
+                             <div class="color-presets">
+                                 <button class="bg-preset" data-color="#ffffff" style="background: #ffffff; border: 1px solid #e5e7eb;" title="Blanco"></button>
+                                 <button class="bg-preset" data-color="#f8fafc" style="background: #f8fafc;" title="Gris Claro"></button>
+                                 <button class="bg-preset" data-color="#000000" style="background: #000000;" title="Negro"></button>
+                                 <button class="bg-preset" data-color="#1e293b" style="background: #1e293b;" title="Azul Oscuro"></button>
+                                 <button class="bg-preset" data-color="#fef3c7" style="background: #fef3c7;" title="Amarillo Claro"></button>
+                                 <button class="bg-preset" data-color="#dbeafe" style="background: #dbeafe;" title="Azul Claro"></button>
+                                 <button class="bg-preset" data-color="#fce7f3" style="background: #fce7f3;" title="Rosa Claro"></button>
+                                 <button class="bg-preset" data-color="#dcfce7" style="background: #dcfce7;" title="Verde Claro"></button>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+                
+                <div class="logo-preview">
+                    <div id="logoDisplay" class="logo-display">GLITCH LOGO</div>
+                </div>
+                
+                <div class="logo-actions">
+                    <button id="generateBtn" class="logo-btn primary">
+                        <i class="fas fa-magic"></i> Generar Logo
+                    </button>
+                    <button id="copyBtn" class="logo-btn secondary">
+                        <i class="fas fa-copy"></i> Copiar Texto
+                    </button>
+                    <button id="downloadBtn" class="logo-btn success">
+                        <i class="fas fa-download"></i> Descargar Logo
+                    </button>
+                    <button id="resetBtn" class="logo-btn secondary">
+                        <i class="fas fa-undo"></i> Restablecer
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <section class="info-section" id="about">
+            <h2>Acerca del Generador de Logo Glitch</h2>
+            <p>Nuestro generador de logo especializado combina tipografía moderna con efectos glitch sutiles para crear identidades de marca únicas. Ya sea que estés diseñando logos para estudios de juegos, empresas tecnológicas, agencias creativas o marcas modernas, nuestro enfoque centrado en tipografía asegura que tu logo destaque mientras mantiene la legibilidad y el atractivo profesional.</p>
+            
+            <h3>Cómo Crear Logos Glitch Profesionales</h3>
+            <p>Nuestro generador de logo glitch combina tipografía moderna con efectos glitch sutiles para crear identidades de marca únicas. Comienza con tu nombre de marca, elige entre múltiples estilos tipográficos y ajusta la intensidad para lograr el equilibrio perfecto entre creatividad y profesionalismo.</p>
+            
+            <ul class="tips-list">
+                <li>Ingresa tu nombre de marca o texto de logo</li>
+                <li>Selecciona entre estilos tipográficos Moderno, Negrita, Elegante o Tecnología</li>
+                <li>Ajusta la intensidad tipográfica de sutil a creativo</li>
+                <li>Elige colores personalizados para texto y fondo</li>
+                <li>Descarga imágenes PNG de alta resolución</li>
+            </ul>
+            
+            <h3>Perfecto para Marcas Modernas</h3>
+            <p>Ya sea que estés diseñando logos para estudios de juegos, empresas tecnológicas, agencias creativas o marcas modernas, nuestro enfoque centrado en tipografía asegura que tu logo destaque mientras mantiene la legibilidad y el atractivo profesional.</p>
+            
+            <div class="effects-grid">
+                <div class="effect-card">
+                    <h4>Gaming & Entertainment</h4>
+                    <p>Create unique logos for gaming studios, esports teams, and entertainment brands with our specialized typography effects.</p>
+                </div>
+                <div class="effect-card">
+                    <h4>Technology & Software</h4>
+                    <p>Design modern tech logos with professional typography and subtle glitch elements that convey innovation.</p>
+                </div>
+                <div class="effect-card">
+                    <h4>Creative Agencies</h4>
+                    <p>Stand out in the creative industry with unique typography-focused logos that showcase artistic vision.</p>
+                </div>
+                <div class="effect-card">
+                    <h4>Modern Startups</h4>
+                    <p>Build brand identity for modern startups with clean, professional logos that have a creative edge.</p>
+                </div>
+                <div class="effect-card">
+                    <h4>Digital Art Projects</h4>
+                    <p>Create stunning typography art and digital designs with our advanced logo generation tools.</p>
+                </div>
+                <div class="effect-card">
+                    <h4>Free Online Tool</h4>
+                    <p>Create professional logos instantly with our free online tool. No registration required, no watermarks, and unlimited designs.</p>
+                </div>
+            </div>
+            
+            <h3>Key Features</h3>
+            <ul class="tips-list">
+                <li><strong>100% Free to Use:</strong> No registration required, no watermarks</li>
+                <li><strong>High-Resolution Export:</strong> Download logos in professional quality</li>
+                <li><strong>Multiple Typography Styles:</strong> Modern, Bold, Elegant, and Tech styles</li>
+                <li><strong>Custom Color Options:</strong> Full control over text and background colors</li>
+                <li><strong>Professional Typography:</strong> Advanced character variations and kerning effects</li>
+                <li><strong>Subtle Glitch Elements:</strong> Enhance rather than distract from brand identity</li>
+            </ul>
+            
+            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Looking for more text effects? Try our <a href="index.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Glitch Text Generator</a> for Zalgo text, Matrix effects, and more creative transformations.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Glitch Logo Generator</h3>
+                    <p>Create professional typography-focused logos with subtle glitch elements. Perfect for modern brands and creative projects.</p>
+                    <div class="social-links">
+                        <a href="#" title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Share on Reddit"><i class="fab fa-reddit"></i></a>
+                        <a href="#" title="View on GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Text Generator</a></li>
+                        <li><a href="glitch-logo.html">Logo Generator</a></li>
+                        <li><a href="font-generator.html">Font Generator</a></li>
+                        <li><a href="index.html#zalgo">Zalgo Text</a></li>
+                        <li><a href="index.html#matrix">Matrix Style</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Use Cases</h4>
+                    <ul>
+                        <li><a href="index.html#brand">Brand Identity</a></li>
+                        <li><a href="index.html#gaming">Gaming Logos</a></li>
+                        <li><a href="index.html#tech">Tech Companies</a></li>
+                        <li><a href="index.html#creative">Creative Agencies</a></li>
+                        <li><a href="index.html#typography">Typography Art</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Glitch Logo Generator. All rights reserved. Made with <i class="fas fa-heart"></i> for the creative community.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy.html">Privacy</a>
+                        <span class="separator">|</span>
+                        <a href="../terms.html">Terms</a>
+                        <span class="separator">|</span>
+                        <a href="../cookies.html">Cookies</a>
+                        <span class="separator">|</span>
+                        <a href="../sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../glitch-logo.js"></script>
+    <script>
+        function changeLanguage(language) {
+            if (language === 'zh') {
+                window.location.href = '../zh/glitch-logo.html';
+            } else if (language === 'en') {
+                window.location.href = '../glitch-logo.html';
+            } else if (language === 'es') {
+                window.location.href = 'glitch-logo.html';
+            }
+        }
+    </script>
+</body>
+</html> 

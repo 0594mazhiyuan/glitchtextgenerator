@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa del Sitio - Generador de Texto Glitch</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .sitemap-section {
+            margin-bottom: 2rem;
+        }
+        .sitemap-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+        }
+        .sitemap-list li {
+            margin-bottom: 0.5rem;
+        }
+        .sitemap-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sitemap-list a:hover {
+            color: var(--primary-color);
+        }
+        .sitemap-list i {
+            color: var(--accent-color);
+            width: 16px;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        .back-home:hover {
+            color: var(--primary-hover);
+        }
+        .language-section {
+            background: var(--background-light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        .language-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .priority-high {
+            border-left: 3px solid var(--success-color);
+            padding-left: 0.5rem;
+        }
+        .priority-medium {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 0.5rem;
+        }
+        .priority-low {
+            border-left: 3px solid var(--text-secondary);
+            padding-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="sitemap-container">
+        <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i>
+            Volver al Generador de Texto Glitch
+        </a>
+        
+        <h1>Mapa del Sitio</h1>
+        <p>Estructura de navegación completa del Generador de Texto Glitch - Tu guía completa de todas las páginas y funciones</p>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-home"></i> Páginas Principales</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html"><i class="fas fa-star"></i>Página Principal (Generador de Texto Glitch)</a></li>
+                    <li class="priority-high"><a href="font-generator.html"><i class="fas fa-magic"></i>Herramienta Generador de Fuentes</a></li>
+                    <li class="priority-high"><a href="glitch-logo.html"><i class="fas fa-font"></i>Generador de Logo Glitch</a></li>
+                    <li class="priority-medium"><a href="privacy.html"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+                    <li class="priority-low"><a href="sitemap.html"><i class="fas fa-sitemap"></i>Mapa del Sitio</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-globe"></i> Versiones de Idioma</h2>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag-usa"></i> English (Inglés)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="../index.html"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="../font-generator.html"><i class="fas fa-magic"></i>Font Generator</a></li>
+                        <li><a href="../glitch-logo.html"><i class="fas fa-font"></i>Logo Generator</a></li>
+                        <li><a href="../privacy.html"><i class="fas fa-shield-alt"></i>Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> 中文 (Chino)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="../zh/index.html"><i class="fas fa-home"></i>主页</a></li>
+                        <li><a href="../zh/font-generator.html"><i class="fas fa-magic"></i>字体生成器</a></li>
+                        <li><a href="../zh/glitch-logo.html"><i class="fas fa-font"></i>标志生成器</a></li>
+                        <li><a href="../zh/privacy.html"><i class="fas fa-shield-alt"></i>隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> Español (Español)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i>Página Principal</a></li>
+                        <li><a href="font-generator.html"><i class="fas fa-magic"></i>Generador de Fuentes</a></li>
+                        <li><a href="glitch-logo.html"><i class="fas fa-font"></i>Generador de Logo</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-palette"></i> Efectos de Texto</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html#zalgo"><i class="fas fa-ghost"></i>Efecto de Texto Zalgo</a></li>
+                    <li class="priority-high"><a href="index.html#matrix"><i class="fas fa-code"></i>Efecto Estilo Matrix</a></li>
+                    <li class="priority-medium"><a href="index.html#shuffle"><i class="fas fa-random"></i>Efecto Glitch de Mezcla</a></li>
+                    <li class="priority-medium"><a href="index.html#mirror"><i class="fas fa-mirror"></i>Efecto de Texto Espejo</a></li>
+                    <li class="priority-high"><a href="index.html#logo"><i class="fas fa-font"></i>Logo Tipográfico Glitch</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-font"></i> Funciones del Generador de Fuentes</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="font-generator.html"><i class="fas fa-magic"></i>Herramienta Generador de Fuentes</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#unicode"><i class="fas fa-text-height"></i>Estilos de Fuente Unicode</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#social-media"><i class="fas fa-share-alt"></i>Fuentes para Redes Sociales</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#copy-paste"><i class="fas fa-copy"></i>Copiar y Pegar Fuentes</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#preview"><i class="fas fa-eye"></i>Vista Previa en Tiempo Real</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#download"><i class="fas fa-download"></i>Descargar Imágenes de Fuente</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> Funciones del Generador de Logo</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="glitch-logo.html"><i class="fas fa-font"></i>Generador de Logo Glitch</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#features"><i class="fas fa-star"></i>Funciones de Logo</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>Ejemplos de Logo</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#tutorial"><i class="fas fa-graduation-cap"></i>Tutorial de Diseño de Logo</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#typography"><i class="fas fa-font"></i>Estilos Tipográficos</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#colors"><i class="fas fa-palette"></i>Personalización de Colores</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-users"></i> Casos de Uso</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#gaming"><i class="fas fa-gamepad"></i>Nombres de Usuario para Juegos</a></li>
+                    <li class="priority-medium"><a href="index.html#social"><i class="fas fa-share-alt"></i>Redes Sociales</a></li>
+                    <li class="priority-medium"><a href="index.html#art"><i class="fas fa-paint-brush"></i>Arte Digital</a></li>
+                    <li class="priority-medium"><a href="index.html#writing"><i class="fas fa-pen"></i>Escritura Creativa</a></li>
+                    <li class="priority-medium"><a href="index.html#design"><i class="fas fa-desktop"></i>Diseño Web</a></li>
+                    <li class="priority-medium"><a href="index.html#typography"><i class="fas fa-font"></i>Arte Tipográfico</a></li>
+                    <li class="priority-medium"><a href="index.html#brand"><i class="fas fa-trademark"></i>Identidad de Marca</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> Herramientas y Funciones</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html#copy"><i class="fas fa-copy"></i>Copiar al Portapapeles</a></li>
+                    <li class="priority-high"><a href="index.html#save"><i class="fas fa-image"></i>Guardar como Imagen</a></li>
+                    <li class="priority-medium"><a href="index.html#intensity"><i class="fas fa-sliders-h"></i>Control de Intensidad</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#features"><i class="fas fa-star"></i>Funciones de Logo</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>Ejemplos de Logo</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#load-more"><i class="fas fa-plus"></i>Cargar Más Fuentes</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-info-circle"></i> Información y Ayuda</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#about"><i class="fas fa-info"></i>Acerca del Texto Glitch</a></li>
+                    <li class="priority-medium"><a href="index.html#how-it-works"><i class="fas fa-cogs"></i>Cómo Funciona</a></li>
+                    <li class="priority-medium"><a href="index.html#tips"><i class="fas fa-lightbulb"></i>Consejos de Uso</a></li>
+                    <li class="priority-medium"><a href="index.html#faq"><i class="fas fa-question-circle"></i>Preguntas Frecuentes</a></li>
+                    <li class="priority-low"><a href="privacy.html"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="sitemap-section">
+            <h2><i class="fas fa-external-link-alt"></i> Recursos Externos</h2>
+            <ul class="sitemap-list">
+                <li><a href="../sitemap.xml"><i class="fas fa-sitemap"></i>Mapa del Sitio XML</a></li>
+                <li><a href="../robots.txt"><i class="fas fa-robot"></i>Robots.txt</a></li>
+                <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i>Repositorio GitHub</a></li>
+                <li><a href="https://glyphy.io/font-generator" target="_blank"><i class="fas fa-external-link-alt"></i>Inspirado en Glyphy</a></li>
+            </ul>
+        </div>
+        
+        <div class="sitemap-section">
+            <h2><i class="fas fa-chart-bar"></i> Estadísticas del Sitio</h2>
+            <ul class="sitemap-list">
+                <li><i class="fas fa-file"></i>Total de Páginas: 12+ (incluyendo versiones de idioma)</li>
+                <li><i class="fas fa-language"></i>Idiomas: Inglés, Chino, Español</li>
+                <li><i class="fas fa-magic"></i>Herramientas: Generador de Texto, Generador de Fuentes, Generador de Logo</li>
+                <li><i class="fas fa-palette"></i>Efectos: 5+ efectos de texto glitch</li>
+                <li><i class="fas fa-font"></i>Fuentes: 300+ estilos de fuente Unicode</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

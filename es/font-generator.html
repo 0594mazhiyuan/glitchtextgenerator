@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 基础SEO -->
+  <title>Generador de Fuentes Gratuito - 300+ Estilos de Texto Unicode para Instagram, Twitter, Discord</title>
+  <meta name="description" content="Generador de fuentes Unicode gratuito con 300+ estilos de texto elegantes. Crea fuentes geniales para Instagram, Twitter, Discord, TikTok. ¡Copia y pega al instante! Sin registro requerido.">
+  <meta name="keywords" content="generador de fuentes, generador de texto elegante, fuentes unicode, generador de texto genial, fuentes instagram, fuentes twitter, fuentes discord, fuentes tiktok, fuentes redes sociales, convertidor de texto, fuentes elegantes, generador de fuentes gratuito, copiar pegar fuentes">
+  <meta name="author" content="Generador de Fuentes">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://glitchtextgenerator.com/es/font-generator.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://glitchtextgenerator.com/es/font-generator.html">
+  <meta property="og:title" content="Generador de Fuentes Gratuito - 300+ Estilos de Texto Unicode para Redes Sociales">
+  <meta property="og:description" content="Generador de fuentes Unicode gratuito con 300+ estilos de texto elegantes. Crea fuentes geniales para Instagram, Twitter, Discord, TikTok. ¡Copia y pega al instante!">
+  <meta property="og:image" content="https://glitchtextgenerator.com/logo.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Generador de Fuentes">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://glitchtextgenerator.com/es/font-generator.html">
+  <meta property="twitter:title" content="Generador de Fuentes Gratuito - 300+ Estilos de Texto Unicode para Redes Sociales">
+  <meta property="twitter:description" content="Generador de fuentes Unicode gratuito con 300+ estilos de texto elegantes. Crea fuentes geniales para Instagram, Twitter, Discord, TikTok. ¡Copia y pega al instante!">
+  <meta property="twitter:image" content="https://glitchtextgenerator.com/logo.png">
+  
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Font Generator",
+    "description": "Free online font generator with 300+ fancy Unicode text styles for social media",
+    "url": "https://glitchtextgenerator.com/es/font-generator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "300+ Unicode font styles",
+      "Instant text conversion", 
+      "Copy to clipboard",
+      "Social media optimized",
+      "Mobile friendly",
+      "No registration required",
+      "Free to use"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1250"
+    }
+  }
+  </script>
+  
+  <!-- 移动端优化 -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#6366f1">
+  
+  <!-- 资源预加载 -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="../fontStyles/fonts_chunk_1.json" as="fetch" crossorigin>
+  <link rel="preload" href="../fontStyles/fonts_chunk_2.json" as="fetch" crossorigin>
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background: #f8fafc;
+      margin: 0;
+      color: #222;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 8px #0001;
+      padding: 1.5rem 0 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin: 0 0 0.3rem 0;
+      letter-spacing: 1px;
+    }
+    header p {
+      color: #666;
+      font-size: 1rem;
+      margin: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px #0001;
+      padding: 2rem 1rem 1.5rem 1rem;
+    }
+    .input-area {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .input-area input {
+      font-size: 1.2rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .input-area input:focus {
+      border: 1.5px solid #6366f1;
+    }
+    .font-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .font-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      box-shadow: 0 1px 2px #0001;
+      flex-wrap: wrap;
+    }
+    .font-name {
+      font-weight: 600;
+      min-width: 110px;
+      color: #6366f1;
+      font-size: 1.05rem;
+      margin-right: 1rem;
+    }
+    .font-output {
+      flex: 1 1 200px;
+      font-size: 1.15rem;
+      word-break: break-all;
+      margin-right: 1rem;
+    }
+    .copy-btn {
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .copy-btn:active, .copy-btn.copied {
+      background: #10b981;
+    }
+    .load-more-btn {
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin: 2rem auto 0 auto;
+      display: block;
+      font-weight: 600;
+    }
+    .load-more-btn:hover {
+      background: #4f46e5;
+    }
+    .load-more-btn:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+    }
+    /* 屏幕阅读器友好 */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    @media (max-width: 600px) {
+      .container { padding: 1rem 0.2rem; }
+      .font-row { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+      .font-name { margin-bottom: 0.2rem; }
+      .font-output { margin-right: 0; }
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.95rem;
+      margin: 2.5rem 0 1.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header style="position: relative; background: #fff; box-shadow: 0 2px 8px #0001; padding: 1.5rem 0 1rem 0; text-align: center;">
+    <div style="position: absolute; right: 2rem; top: 1.5rem; z-index: 2;">
+      <div class="language-selector" style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 8px;">
+        <select id="languageSelect" onchange="changeLanguage(this.value)" style="background: white; border: 1px solid #e5e7eb; color: #333; font-size: 0.95rem; cursor: pointer; padding: 0.3rem 0.7rem; border-radius: 6px;">
+          <option value="en">🇺🇸 English</option>
+          <option value="zh">🇨🇳 中文</option>
+          <option value="es" selected>🇪🇸 Español</option>
+        </select>
+      </div>
+    </div>
+    <h1 style="margin-top: 0;">Generador de Fuentes</h1>
+    <p>¡Copia y pega texto Unicode elegante para Instagram, Twitter, Discord y más!</p>
+  </header>
+  <main>
+    <div class="container">
+      <section class="input-area">
+        <label for="userInput" class="sr-only">Ingresa texto para convertir</label>
+        <input id="userInput" type="text" maxlength="100" placeholder="Ingresa tu texto aquí..." aria-label="Ingresa texto para convertir a fuentes elegantes">
+      </section>
+      <section class="font-list" id="fontList" aria-label="Estilos de fuentes generados">
+        <!-- Los estilos de fuentes se generarán aquí -->
+      </section>
+      <button id="loadMoreBtn" class="load-more-btn" aria-label="Cargar más estilos de fuentes">Cargar Más Fuentes</button>
+      
+      <!-- Sección de Cómo Usar -->
+      <section class="how-to-use" style="margin-top: 3rem; padding: 2rem; background: #f8fafc; border-radius: 12px;">
+        <h2 style="color: #6366f1; margin-bottom: 1rem; font-size: 1.5rem;">Cómo Usar Nuestro Generador de Fuentes</h2>
+        <ol style="line-height: 1.8; color: #555;">
+          <li>Escribe tu texto en el cuadro de entrada de arriba</li>
+          <li>Elige entre 300+ estilos de fuentes Unicode</li>
+          <li>Haz clic en el botón "Copiar" junto a tu estilo favorito</li>
+          <li>Pega en cualquier lugar - Instagram, Twitter, Discord, etc.</li>
+        </ol>
+      </section>
+      
+      <!-- Sección FAQ -->
+      <section class="faq-section" style="margin-top: 2rem; padding: 2rem; background: #f8fafc; border-radius: 12px;">
+        <h2 style="color: #6366f1; margin-bottom: 1rem; font-size: 1.5rem;">Preguntas Frecuentes</h2>
+        <div class="faq-item" style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">¿Cómo usar el generador de fuentes?</h3>
+          <p style="color: #666; line-height: 1.6;">Simplemente escribe tu texto en el cuadro de entrada y verás cómo se convierte a 300+ estilos de fuentes diferentes al instante. ¡Haz clic en cualquier botón copiar para usar tu estilo favorito en cualquier lugar!</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">¿Estas fuentes son gratuitas para usar?</h3>
+          <p style="color: #666; line-height: 1.6;">¡Sí! Todas nuestras fuentes Unicode son completamente gratuitas para usar en cualquier plataforma incluyendo Instagram, Twitter, Discord y más.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">¿Qué plataformas soportan estas fuentes?</h3>
+          <p style="color: #666; line-height: 1.6;">Nuestras fuentes Unicode funcionan en Instagram, Twitter, Discord, TikTok, Facebook, WhatsApp y la mayoría de plataformas de redes sociales.</p>
+        </div>
+        <div class="faq-item" style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">¿Necesito registrarme para usar esta herramienta?</h3>
+          <p style="color: #666; line-height: 1.6;">¡No se requiere registro! Nuestro generador de fuentes es completamente gratuito y funciona al instante sin necesidad de registrarse.</p>
+        </div>
+      </section>
+      
+      <!-- Sección de Herramientas Relacionadas -->
+      <section class="related-tools" style="margin-top: 2rem; padding: 2rem; background: #f8fafc; border-radius: 12px;">
+        <h3 style="color: #6366f1; margin-bottom: 1rem; font-size: 1.3rem;">Herramientas Relacionadas</h3>
+        <ul style="list-style: none; padding: 0; line-height: 1.8;">
+          <li style="margin-bottom: 0.5rem;"><a href="../glitch-logo.html" style="color: #6366f1; text-decoration: none;">🎨 Generador de Logo Glitch</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="../index.html" style="color: #6366f1; text-decoration: none;">✨ Generador de Texto Glitch</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="../sitemap.html" style="color: #6366f1; text-decoration: none;">🗺️ Mapa del Sitio</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div>Genera 300+ estilos de fuentes Unicode. ¡Haz clic en cualquier botón copiar para usar tu estilo favorito en cualquier lugar!</div>
+    
+  </footer>
+  <script>
+    function changeLanguage(lang) {
+      if(lang === 'zh') {
+        window.location.href = '../zh/font-generator.html';
+      } else if(lang === 'en') {
+        window.location.href = '../font-generator.html';
+      } else if(lang === 'es') {
+        window.location.href = 'font-generator.html';
+      }
+    }
+    // 花式字体转换映射
+    const fontStyles = [
+      { name: 'Palmistry', map: { A:'ꍏ', B:'♭', C:'☾', D:'ᕲ', E:'€', F:'Ϝ', G:'Ꮆ', H:'♄', I:'♗', J:'♪', K:'ϰ', L:'↳', M:'ᗰ', N:'ℵ', O:'⊙', P:'ρ', Q:'ᵠ', R:'☈', S:'∫', T:'†', U:'☋', V:'✓', W:'ω', X:'⌘', Y:'⚧', Z:'☡', a:'ρ', b:'ꍏ', c:'↳', d:'∫', e:'€', f:'Ϝ', g:'Ꮆ', h:'♄', i:'♗', j:'♪', k:'ϰ', l:'↳', m:'ᗰ', n:'ℵ', o:'⊙', p:'ρ', q:'ᵠ', r:'☈', s:'∫', t:'†', u:'☋', v:'✓', w:'ω', x:'⌘', y:'⚧', z:'☡' } },
+      { name: 'Medieval Times', map: { A:'𝔄', B:'𝔅', C:'ℭ', D:'𝔇', E:'𝔈', F:'𝔉', G:'𝔊', H:'ℌ', I:'ℑ', J:'𝔍', K:'𝔎', L:'𝔏', M:'𝔐', N:'𝔑', O:'𝔒', P:'𝔓', Q:'𝔔', R:'ℜ', S:'𝔖', T:'𝔗', U:'𝔘', V:'𝔙', W:'𝔚', X:'𝔛', Y:'𝔜', Z:'ℨ', a:'𝔞', b:'𝔟', c:'𝔠', d:'𝔡', e:'𝔢', f:'𝔣', g:'𝔤', h:'𝔥', i:'𝔦', j:'𝔧', k:'𝔨', l:'𝔩', m:'𝔪', n:'𝔫', o:'𝔬', p:'𝔭', q:'𝔮', r:'𝔯', s:'𝔰', t:'𝔱', u:'𝔲', v:'𝔳', w:'𝔴', x:'𝔵', y:'𝔶', z:'𝔷' } },
+      { name: 'Aesthetic', map: { A:'Ａ', B:'Ｂ', C:'Ｃ', D:'Ｄ', E:'Ｅ', F:'Ｆ', G:'Ｇ', H:'Ｈ', I:'Ｉ', J:'Ｊ', K:'Ｋ', L:'Ｌ', M:'Ｍ', N:'Ｎ', O:'Ｏ', P:'Ｐ', Q:'Ｑ', R:'Ｒ', S:'Ｓ', T:'Ｔ', U:'Ｕ', V:'Ｖ', W:'Ｗ', X:'Ｘ', Y:'Ｙ', Z:'Ｚ', a:'ａ', b:'ｂ', c:'ｃ', d:'ｄ', e:'ｅ', f:'ｆ', g:'ｇ', h:'ｈ', i:'ｉ', j:'ｊ', k:'ｋ', l:'ｌ', m:'ｍ', n:'ｎ', o:'ｏ', p:'ｐ', q:'ｑ', r:'ｒ', s:'ｓ', t:'ｔ', u:'ｕ', v:'ｖ', w:'ｗ', x:'ｘ', y:'ｙ', z:'ｚ' } },
+      { name: 'Silicon', map: { A:'𝙰', B:'𝙱', C:'𝙲', D:'𝙳', E:'𝙴', F:'𝙵', G:'𝙶', H:'𝙷', I:'𝙸', J:'𝙹', K:'𝙺', L:'𝙻', M:'𝙼', N:'𝙽', O:'𝙾', P:'𝙿', Q:'𝚀', R:'𝚁', S:'𝚂', T:'𝚃', U:'𝚄', V:'𝚅', W:'𝚆', X:'𝚇', Y:'𝚈', Z:'𝚉', a:'𝚊', b:'𝚋', c:'𝚌', d:'𝚍', e:'𝚎', f:'𝚏', g:'𝚐', h:'𝚑', i:'𝚒', j:'𝚓', k:'𝚔', l:'𝚕', m:'𝚖', n:'𝚗', o:'𝚘', p:'𝚙', q:'𝚚', r:'𝚛', s:'𝚜', t:'𝚝', u:'𝚞', v:'𝚟', w:'𝚠', x:'𝚡', y:'𝚢', z:'𝚣' } },
+      { name: 'Classic Bold', map: { A:'𝐀', B:'𝐁', C:'𝐂', D:'𝐃', E:'𝐄', F:'𝐅', G:'𝐆', H:'𝐇', I:'𝐈', J:'𝐉', K:'𝐊', L:'𝐋', M:'𝐌', N:'𝐍', O:'𝐎', P:'𝐏', Q:'𝐐', R:'𝐑', S:'𝐒', T:'𝐓', U:'𝐔', V:'𝐕', W:'𝐖', X:'𝐗', Y:'𝐘', Z:'𝐙', a:'𝐚', b:'𝐛', c:'𝐜', d:'𝐝', e:'𝐞', f:'𝐟', g:'𝐠', h:'𝐡', i:'𝐢', j:'𝐣', k:'𝐤', l:'𝐥', m:'𝐦', n:'𝐧', o:'𝐨', p:'𝐩', q:'𝐪', r:'𝐫', s:'𝐬', t:'𝐭', u:'𝐮', v:'𝐯', w:'𝐰', x:'𝐱', y:'𝐲', z:'𝐳' } },
+      { name: 'Bubbles', map: { A:'Ⓐ', B:'Ⓑ', C:'Ⓒ', D:'Ⓓ', E:'Ⓔ', F:'Ⓕ', G:'Ⓖ', H:'Ⓗ', I:'Ⓘ', J:'Ⓙ', K:'Ⓚ', L:'Ⓛ', M:'Ⓜ', N:'Ⓝ', O:'Ⓞ', P:'Ⓟ', Q:'Ⓠ', R:'Ⓡ', S:'Ⓢ', T:'Ⓣ', U:'Ⓤ', V:'Ⓥ', W:'Ⓦ', X:'Ⓧ', Y:'Ⓨ', Z:'Ⓩ', a:'ⓐ', b:'ⓑ', c:'ⓒ', d:'ⓓ', e:'ⓔ', f:'ⓕ', g:'ⓖ', h:'ⓗ', i:'ⓘ', j:'ⓙ', k:'ⓚ', l:'ⓛ', m:'ⓜ', n:'ⓝ', o:'ⓞ', p:'ⓟ', q:'ⓠ', r:'ⓡ', s:'ⓢ', t:'ⓣ', u:'ⓤ', v:'ⓥ', w:'ⓦ', x:'ⓧ', y:'ⓨ', z:'ⓩ' } },
+      { name: 'Flip Flop', map: { A:'Ɐ', B:'ꓭ', C:'ꓛ', D:'ꓷ', E:'Ǝ', F:'ꓞ', G:'ꓨ', H:'H', I:'I', J:'ſ', K:'ꓘ', L:'ꓶ', M:'W', N:'N', O:'O', P:'ꓒ', Q:'Ὸ', R:'ꓤ', S:'S', T:'ꓕ', U:'ꓵ', V:'ꓥ', W:'M', X:'X', Y:'⅄', Z:'Z', a:'ɐ', b:'q', c:'ɔ', d:'p', e:'ǝ', f:'ɟ', g:'ᵷ', h:'ɥ', i:'ᴉ', j:'ɾ', k:'ʞ', l:'ʅ', m:'ɯ', n:'u', o:'o', p:'d', q:'b', r:'ɹ', s:'s', t:'ʇ', u:'n', v:'ʌ', w:'ʍ', x:'x', y:'ʎ', z:'z' } },
+      { name: 'Manga', map: { A:'卂', B:'乃', C:'匚', D:'ᗪ', E:'乇', F:'千', G:'Ꮆ', H:'卄', I:'丨', J:'ﾌ', K:'Ҝ', L:'ㄥ', M:'爪', N:'几', O:'ㄖ', P:'卩', Q:'Ɋ', R:'尺', S:'丂', T:'ㄒ', U:'ㄩ', V:'ᐯ', W:'山', X:'乂', Y:'ㄚ', Z:'乙', a:'卂', b:'乃', c:'匚', d:'ᗪ', e:'乇', f:'千', g:'Ꮆ', h:'卄', i:'丨', j:'ﾌ', k:'Ҝ', l:'ㄥ', m:'爪', n:'几', o:'ㄖ', p:'卩', q:'Ɋ', r:'尺', s:'丂', t:'ㄒ', u:'ㄩ', v:'ᐯ', w:'山', x:'乂', y:'ㄚ', z:'乙' } },
+      { name: 'Cursive', map: { A:'𝒜', B:'ℬ', C:'𝒞', D:'𝒟', E:'𝐸', F:'ℱ', G:'𝒢', H:'ℋ', I:'ℐ', J:'𝒥', K:'𝒦', L:'ℒ', M:'ℳ', N:'𝒩', O:'𝒪', P:'𝒫', Q:'𝒬', R:'ℛ', S:'𝒮', T:'𝒯', U:'𝒰', V:'𝒱', W:'𝒲', X:'𝒳', Y:'𝒴', Z:'𝒵', a:'𝒶', b:'𝒷', c:'𝒸', d:'𝒹', e:'ℯ', f:'𝒻', g:'ℊ', h:'𝒽', i:'𝒾', j:'𝒿', k:'𝓀', l:'𝓁', m:'𝓂', n:'𝓃', o:'ℴ', p:'𝓅', q:'𝓆', r:'𝓇', s:'𝓈', t:'𝓉', u:'𝓊', v:'𝓋', w:'𝓌', x:'𝓍', y:'𝓎', z:'𝓏' } },
+    ];
+
+    // 字体文件列表（按顺序加载）
+    const fontFiles = [
+      'fonts_chunk_1.json',
+      'fonts_chunk_2.json',
+      'fonts_chunk_3.json',
+      'fonts_chunk_4.json',
+      'fonts_chunk_5.json',
+      'fonts_chunk_6.json',
+      'fonts_chunk_7.json',
+      'fonts_chunk_8.json',
+      'fonts_chunk_9.json',
+      'fonts_chunk_10.json'
+    ];
+
+    let currentFileIndex = 0;
+    let loadedFonts = [];
+
+    function stylize(text, map) {
+      return text.split('').map(ch => map[ch] || ch).join('');
+    }
+
+    function createFontRow(style, input) {
+      const row = document.createElement('div');
+      row.className = 'font-row';
+      
+      const name = document.createElement('div');
+      name.className = 'font-name';
+      const displayName = style.name || 'Fuente Desconocida';
+      name.textContent = displayName;
+      console.log('Creating font row with name:', displayName);
+      
+      const output = document.createElement('div');
+      output.className = 'font-output';
+      output.textContent = stylize(input, style.map);
+      
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.textContent = 'Copiar';
+      btn.onclick = () => {
+        navigator.clipboard.writeText(output.textContent);
+        btn.classList.add('copied');
+        btn.textContent = '¡Copiado!';
+        setTimeout(() => { btn.classList.remove('copied'); btn.textContent = 'Copiar'; }, 1200);
+      };
+      
+      row.appendChild(name);
+      row.appendChild(output);
+      row.appendChild(btn);
+      return row;
+    }
+
+    function renderFonts() {
+      const input = document.getElementById('userInput').value || 'Generador de Fuentes';
+      const list = document.getElementById('fontList');
+      
+      // 清空列表
+      list.innerHTML = '';
+      
+      // 显示初始字体
+      fontStyles.forEach(style => {
+        list.appendChild(createFontRow(style, input));
+      });
+      
+      // 重新显示已加载的动态字体
+      loadedFonts.forEach(style => {
+        list.appendChild(createFontRow(style, input));
+      });
+      
+      // 更新Load More按钮状态
+      updateLoadMoreButton();
+    }
+
+    async function loadMoreFonts() {
+      const input = document.getElementById('userInput').value || 'Generador de Fuentes';
+      const list = document.getElementById('fontList');
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      
+      if (currentFileIndex >= fontFiles.length) {
+        return;
+      }
+      
+      // 显示加载状态
+      loadMoreBtn.disabled = true;
+      loadMoreBtn.textContent = 'Cargando...';
+      
+      try {
+        // 加载下一个字体文件
+        const fileName = fontFiles[currentFileIndex];
+        console.log(`Loading font file: ${fileName}`);
+        
+        const response = await fetch(`../fontStyles/${fileName}`);
+        
+        if (!response.ok) {
+          throw new Error(`Error al cargar ${fileName}: ${response.status} ${response.statusText}`);
+        }
+        
+        const fontData = await response.json();
+        console.log(`Loaded ${fontData.length} fonts from ${fileName}`);
+        
+        // 处理字体数据
+        fontData.forEach((font, index) => {
+          if (font.map && Object.keys(font.map).length > 0) {
+            // 生成更好的字体名称
+            let fontName;
+            if (font.title && font.title.trim() !== '') {
+              fontName = font.title;
+            } else if (font.name && font.name.trim() !== '') {
+              fontName = font.name;
+            } else {
+              // 使用文件名和索引生成名称
+              const fileNumber = currentFileIndex + 1;
+              fontName = `Fuente ${fileNumber}-${index + 1}`;
+            }
+            
+            console.log(`Processing font: title="${font.title}", name="${font.name}", final="${fontName}"`);
+            
+            // 添加到已加载字体列表
+            loadedFonts.push({
+              name: fontName,
+              map: font.map
+            });
+            
+            // 创建字体行并添加到列表末尾
+            list.appendChild(createFontRow({
+              name: fontName,
+              map: font.map
+            }, input));
+            
+            console.log(`Added font: ${fontName} with ${Object.keys(font.map).length} characters`);
+          } else {
+            console.log(`Skipping font ${index + 1}: no valid map found`);
+          }
+        });
+        
+        currentFileIndex++;
+        updateLoadMoreButton();
+        
+      } catch (error) {
+        console.error('Error loading font file:', error);
+        loadMoreBtn.textContent = 'Error al Cargar Fuentes';
+        setTimeout(() => {
+          loadMoreBtn.disabled = false;
+          updateLoadMoreButton();
+        }, 2000);
+      }
+    }
+
+    function updateLoadMoreButton() {
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      if (currentFileIndex >= fontFiles.length) {
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.textContent = 'All Font Files Loaded';
+      } else {
+        loadMoreBtn.disabled = false;
+        loadMoreBtn.textContent = 'Load More Fonts';
+      }
+    }
+
+    // 事件监听器
+    document.getElementById('userInput').addEventListener('input', renderFonts);
+    document.getElementById('loadMoreBtn').addEventListener('click', loadMoreFonts);
+    window.onload = renderFonts;
+  </script>
+</body>
+</html> 
