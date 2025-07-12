@@ -214,15 +214,22 @@
 </head>
 <body>
   <header style="position: relative; background: #fff; box-shadow: 0 2px 8px #0001; padding: 1.5rem 0 1rem 0; text-align: center;">
-    <div style="position: absolute; right: 2rem; top: 1.5rem; z-index: 2;">
-      <div class="language-selector" style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 8px;">
-        <select id="languageSelect" onchange="changeLanguage(this.value)" style="background: white; border: 1px solid #e5e7eb; color: #333; font-size: 0.95rem; cursor: pointer; padding: 0.3rem 0.7rem; border-radius: 6px;">
-          <option value="en" selected>🇺🇸 English</option>
-          <option value="zh">🇨🇳 中文</option>
-          <option value="es">🇪🇸 Español</option>
-        </select>
+          <div style="position: absolute; right: 2rem; top: 1.5rem; z-index: 2;">
+        <div class="language-selector" style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 8px;">
+          <select id="languageSelect" onchange="changeLanguage(this.value)" style="background: white; border: 1px solid #e5e7eb; color: #333; font-size: 0.95rem; cursor: pointer; padding: 0.3rem 0.7rem; border-radius: 6px;">
+            <option value="en" selected>🇺🇸 English</option>
+            <option value="zh">🇨🇳 中文</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="ar">🇸🇦 العربية</option>
+            <option value="hi">🇮🇳 हिन्दी</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="pt">🇵🇹 Português</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="bn">🇧🇩 বাংলা</option>
+            <option value="id">🇮🇩 Indonesia</option>
+          </select>
+        </div>
       </div>
-    </div>
     <h1 style="margin-top: 0;">Font Generator</h1>
     <p>Copy and paste fancy Unicode text for Instagram, Twitter, Discord, and more!</p>
   </header>
@@ -292,6 +299,20 @@
         window.location.href = 'font-generator.html';
       } else if(lang === 'es') {
         window.location.href = 'es/font-generator.html';
+      } else if(lang === 'ar') {
+        window.location.href = 'ar/font-generator.html';
+      } else if(lang === 'hi') {
+        window.location.href = 'hi/font-generator.html';
+      } else if(lang === 'fr') {
+        window.location.href = 'fr/font-generator.html';
+      } else if(lang === 'pt') {
+        window.location.href = 'pt/font-generator.html';
+      } else if(lang === 'ru') {
+        window.location.href = 'ru/font-generator.html';
+      } else if(lang === 'bn') {
+        window.location.href = 'bn/font-generator.html';
+      } else if(lang === 'id') {
+        window.location.href = 'id/font-generator.html';
       }
     }
     // 花式字体转换映射

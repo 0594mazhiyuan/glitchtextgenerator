@@ -87,10 +87,26 @@
 </head>
 <body>
     <div class="sitemap-container">
-        <a href="index.html" class="back-home">
-            <i class="fas fa-arrow-left"></i>
-            Back to Glitch Text Generator
-        </a>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <a href="index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Glitch Text Generator
+            </a>
+            <div class="language-selector">
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="en" selected>🇺🇸 English</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="hi">🇮🇳 हिन्दी</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="pt">🇵🇹 Português</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="bn">🇧🇩 বাংলা</option>
+                    <option value="id">🇮🇩 Indonesia</option>
+                </select>
+            </div>
+        </div>
         
         <h1>Sitemap</h1>
         <p>Complete navigation structure of Glitch Text Generator - Your comprehensive guide to all pages and features</p>
@@ -134,6 +150,69 @@
                         <li><a href="es/font-generator.html"><i class="fas fa-magic"></i>Generador de Fuentes</a></li>
                         <li><a href="es/glitch-logo.html"><i class="fas fa-font"></i>Generador de Logo</a></li>
                         <li><a href="es/privacy.html"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> العربية (Arabic)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="ar/index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                        <li><a href="ar/font-generator.html"><i class="fas fa-magic"></i>مولد الخطوط</a></li>
+                        <li><a href="ar/glitch-logo.html"><i class="fas fa-font"></i>مولد اللوغو</a></li>
+                        <li><a href="ar/privacy.html"><i class="fas fa-shield-alt"></i>سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> हिन्दी (Hindi)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="hi/index.html"><i class="fas fa-home"></i>मुख्य पृष्ठ</a></li>
+                        <li><a href="hi/font-generator.html"><i class="fas fa-magic"></i>फ़ॉन्ट जनरेटर</a></li>
+                        <li><a href="hi/glitch-logo.html"><i class="fas fa-font"></i>लोगो जनरेटर</a></li>
+                        <li><a href="hi/privacy.html"><i class="fas fa-shield-alt"></i>गोपनीयता नीति</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> Indonesia (Indonesian)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="id/index.html"><i class="fas fa-home"></i>Beranda</a></li>
+                        <li><a href="id/font-generator.html"><i class="fas fa-magic"></i>Pembuat Huruf</a></li>
+                        <li><a href="id/glitch-logo.html"><i class="fas fa-font"></i>Pembuat Logo</a></li>
+                        <li><a href="id/privacy.html"><i class="fas fa-shield-alt"></i>Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> Français (French)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="fr/index.html"><i class="fas fa-home"></i>Page d'Accueil</a></li>
+                        <li><a href="fr/font-generator.html"><i class="fas fa-magic"></i>Générateur de Polices</a></li>
+                        <li><a href="fr/glitch-logo.html"><i class="fas fa-font"></i>Générateur de Logo</a></li>
+                        <li><a href="fr/privacy.html"><i class="fas fa-shield-alt"></i>Politique de Confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> Português (Portuguese)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="pt/index.html"><i class="fas fa-home"></i>Página Inicial</a></li>
+                        <li><a href="pt/font-generator.html"><i class="fas fa-magic"></i>Gerador de Fontes</a></li>
+                        <li><a href="pt/glitch-logo.html"><i class="fas fa-font"></i>Gerador de Logo</a></li>
+                        <li><a href="pt/privacy.html"><i class="fas fa-shield-alt"></i>Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> Русский (Russian)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="ru/index.html"><i class="fas fa-home"></i>Главная Страница</a></li>
+                        <li><a href="ru/font-generator.html"><i class="fas fa-magic"></i>Генератор Шрифтов</a></li>
+                        <li><a href="ru/glitch-logo.html"><i class="fas fa-font"></i>Генератор Логотипов</a></li>
+                        <li><a href="ru/privacy.html"><i class="fas fa-shield-alt"></i>Политика Конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> বাংলা (Bengali)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="bn/index.html"><i class="fas fa-home"></i>মূল পৃষ্ঠা</a></li>
+                        <li><a href="bn/font-generator.html"><i class="fas fa-magic"></i>ফন্ট জেনারেটর</a></li>
+                        <li><a href="bn/glitch-logo.html"><i class="fas fa-font"></i>লোগো জেনারেটর</a></li>
+                        <li><a href="bn/privacy.html"><i class="fas fa-shield-alt"></i>গোপনীয়তা নীতি</a></li>
                     </ul>
                 </div>
             </div>
@@ -229,13 +308,39 @@
         <div class="sitemap-section">
             <h2><i class="fas fa-chart-bar"></i> Site Statistics</h2>
             <ul class="sitemap-list">
-                <li><i class="fas fa-file"></i>Total Pages: 12+ (including language versions)</li>
-                <li><i class="fas fa-language"></i>Languages: English, Chinese, Spanish</li>
+                <li><i class="fas fa-file"></i>Total Pages: 45+ (including language versions)</li>
+                <li><i class="fas fa-language"></i>Languages: English, Chinese, Spanish, Arabic, Hindi, French, Portuguese, Russian, Bengali, Indonesian</li>
                 <li><i class="fas fa-magic"></i>Tools: Text Generator, Font Generator, Logo Generator</li>
                 <li><i class="fas fa-palette"></i>Effects: 5+ glitch text effects</li>
                 <li><i class="fas fa-font"></i>Fonts: 300+ Unicode font styles</li>
             </ul>
         </div>
     </div>
+    
+    <script>
+        function changeLanguage(language) {
+            if (language === 'zh') {
+                window.location.href = 'zh/sitemap.html';
+            } else if (language === 'en') {
+                window.location.href = 'sitemap.html';
+            } else if (language === 'es') {
+                window.location.href = 'es/sitemap.html';
+            } else if (language === 'ar') {
+                window.location.href = 'ar/sitemap.html';
+            } else if (language === 'hi') {
+                window.location.href = 'hi/sitemap.html';
+            } else if (language === 'fr') {
+                window.location.href = 'fr/sitemap.html';
+            } else if (language === 'pt') {
+                window.location.href = 'pt/sitemap.html';
+            } else if (language === 'ru') {
+                window.location.href = 'ru/sitemap.html';
+            } else if (language === 'bn') {
+                window.location.href = 'bn/sitemap.html';
+            } else if (language === 'id') {
+                window.location.href = 'id/sitemap.html';
+            }
+        }
+    </script>
 </body>
 </html> 
