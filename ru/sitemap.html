@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта Сайта - Генератор Глитч Текста</title>
+    <meta name="description" content="Полная карта сайта для Генератора Глитч Текста - Легко навигация ко всем нашим инструментам генерации текста, логотипов и шрифтов.">
+    <meta name="keywords" content="карта сайта, генератор глитч текста, генератор текста, онлайн инструменты, навигация">
+    <meta name="author" content="Генератор Глитч Текста">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Карта Сайта - Генератор Глитч Текста">
+    <meta property="og:description" content="Полная карта сайта для Генератора Глитч Текста - Легко навигация ко всем нашим инструментам генерации текста, логотипов и шрифтов.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glitchtextgenerator.com/sitemap.html">
+    <meta property="og:image" content="https://glitchtextgenerator.com/logo.png">
+    <meta property="og:site_name" content="Генератор Глитч Текста">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Карта Сайта - Генератор Глитч Текста">
+    <meta name="twitter:description" content="Полная карта сайта для Генератора Глитч Текста - Легко навигация ко всем нашим инструментам генерации текста, логотипов и шрифтов.">
+    <meta name="twitter:image" content="https://glitchtextgenerator.com/logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .sitemap-section {
+            margin-bottom: 2rem;
+        }
+        .sitemap-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+        }
+        .sitemap-list li {
+            margin-bottom: 0.5rem;
+        }
+        .sitemap-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sitemap-list a:hover {
+            color: var(--primary-color);
+        }
+        .sitemap-list i {
+            color: var(--accent-color);
+            width: 16px;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        .back-home:hover {
+            color: var(--primary-hover);
+        }
+        .language-section {
+            background: var(--background-light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        .language-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .priority-high {
+            border-left: 3px solid var(--success-color);
+            padding-left: 0.5rem;
+        }
+        .priority-medium {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 0.5rem;
+        }
+        .priority-low {
+            border-left: 3px solid var(--text-secondary);
+            padding-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="sitemap-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <a href="index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+                Вернуться к Генератору Глитч Текста
+            </a>
+            <div class="language-selector">
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="en">🇺🇸 English</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="hi">🇮🇳 हिन्दी</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="pt">🇵🇹 Português</option>
+                    <option value="ru" selected>🇷🇺 Русский</option>
+                    <option value="bn">🇧🇩 বাংলা</option>
+                    <option value="id">🇮🇩 Indonesia</option>
+                </select>
+            </div>
+        </div>
+        
+        <h1>Карта Сайта</h1>
+        <p>Полная структура навигации Генератора Глитч Текста - Ваш полный путеводитель по всем страницам и функциям</p>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2>Основные страницы</h2>
+                <ul>
+                    <li><a href="index.html">Генератор Глитч Текста</a> - Основной инструмент для создания глитч-текста</li>
+                    <li><a href="font-generator.html">Генератор Шрифтов</a> - Создавайте стильные Unicode шрифты</li>
+                    <li><a href="glitch-logo.html">Генератор Глитч Логотипов</a> - Создавайте логотипы с эффектами глитч</li>
+                    <li><a href="privacy.html">Политика Конфиденциальности</a> - Информация о защите данных</li>
+                    <li><a href="sitemap.html">Карта Сайта</a> - Полная навигация по сайту</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>Функции генератора текста</h2>
+                <ul>
+                    <li><a href="index.html#zalgo">Текст Залго</a> - Комбинирующие символы для эффекта глитч</li>
+                    <li><a href="index.html#matrix">Стиль Матрицы</a> - Эффект зеленого кода на черном фоне</li>
+                    <li><a href="index.html#shuffle">Глитч Перемешивания</a> - Случайно перемешанные символы</li>
+                    <li><a href="index.html#mirror">Зеркальный Текст</a> - Текст, перевернутый горизонтально</li>
+                    <li><a href="index.html#upside-down">Перевернутый Текст</a> - Текст, перевернутый вертикально</li>
+                    <li><a href="index.html#bubble">Текст в Пузырях</a> - Символы в кругах</li>
+                    <li><a href="index.html#gothic">Готический Стиль</a> - Средневековые символы</li>
+                    <li><a href="index.html#cursive">Курсивный Стиль</a> - Элегантный курсивный текст</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>Инструменты шрифтов</h2>
+                <ul>
+                    <li><a href="font-generator.html#unicode">Unicode Шрифты</a> - Более 300 стилей символов</li>
+                    <li><a href="font-generator.html#fancy">Стильные Шрифты</a> - Декоративные стили для социальных сетей</li>
+                    <li><a href="font-generator.html#symbols">Специальные Символы</a> - Уникальные символы и эмодзи</li>
+                    <li><a href="font-generator.html#copy">Копировать-Вставить</a> - Мгновенное использование на всех платформах</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>Генератор логотипов</h2>
+                <ul>
+                    <li><a href="glitch-logo.html#typography">Типографический дизайн</a> - Логотипы, ориентированные на типографику</li>
+                    <li><a href="glitch-logo.html#effects">Эффекты глитч</a> - Искажения и визуальные артефакты</li>
+                    <li><a href="glitch-logo.html#colors">Пользовательские цвета</a> - Настраиваемая цветовая палитра</li>
+                    <li><a href="glitch-logo.html#export">Экспорт высокого разрешения</a> - Скачивание в PNG</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>Информация и поддержка</h2>
+                <ul>
+                    <li><a href="index.html#faq">FAQ</a> - Часто задаваемые вопросы</li>
+                    <li><a href="index.html#how-it-works">Как это работает</a> - Руководство по использованию</li>
+                    <li><a href="index.html#tips">Советы по использованию</a> - Подсказки для лучших результатов</li>
+                    <li><a href="privacy.html">Конфиденциальность</a> - Защита данных пользователя</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>Ресурсы</h2>
+                <ul>
+                    <li><a href="index.html#examples">Примеры</a> - Демонстрации стилей текста</li>
+                    <li><a href="font-generator.html#styles">Стили шрифтов</a> - Полная коллекция шрифтов</li>
+                    <li><a href="glitch-logo.html#templates">Шаблоны логотипов</a> - Готовые к использованию дизайны</li>
+                    <li><a href="index.html#tutorials">Учебники</a> - Пошаговые руководства</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="sitemap-footer">
+            <h3>Быстрая навигация</h3>
+            <div class="quick-links">
+                <a href="index.html" class="quick-link">
+                    <i class="fas fa-magic"></i>
+                    Генератор Текста
+                </a>
+                <a href="font-generator.html" class="quick-link">
+                    <i class="fas fa-font"></i>
+                    Генератор Шрифтов
+                </a>
+                <a href="glitch-logo.html" class="quick-link">
+                    <i class="fas fa-palette"></i>
+                    Генератор Логотипов
+                </a>
+                <a href="privacy.html" class="quick-link">
+                    <i class="fas fa-shield-alt"></i>
+                    Конфиденциальность
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function changeLanguage(language) {
+            if (language === 'zh') {
+                window.location.href = '../zh/sitemap.html';
+            } else if (language === 'en') {
+                window.location.href = '../sitemap.html';
+            } else if (language === 'es') {
+                window.location.href = '../es/sitemap.html';
+            } else if (language === 'ar') {
+                window.location.href = '../ar/sitemap.html';
+            } else if (language === 'hi') {
+                window.location.href = '../hi/sitemap.html';
+            } else if (language === 'fr') {
+                window.location.href = '../fr/sitemap.html';
+            } else if (language === 'pt') {
+                window.location.href = '../pt/sitemap.html';
+            } else if (language === 'ru') {
+                window.location.href = 'sitemap.html';
+            } else if (language === 'bn') {
+                window.location.href = '../bn/sitemap.html';
+            } else if (language === 'id') {
+                window.location.href = '../id/sitemap.html';
+            }
+        }
+    </script>
+</body>
+</html> 
