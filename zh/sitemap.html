@@ -87,10 +87,26 @@
 </head>
 <body>
     <div class="sitemap-container">
-        <a href="index.html" class="back-home">
-            <i class="fas fa-arrow-left"></i>
-            返回故障文字生成器
-        </a>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <a href="index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+                返回故障文字生成器
+            </a>
+            <div class="language-selector">
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="en">🇺🇸 English</option>
+                    <option value="zh" selected>🇨🇳 中文</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="hi">🇮🇳 हिन्दी</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="pt">🇵🇹 Português</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="bn">🇧🇩 বাংলা</option>
+                    <option value="id">🇮🇩 Indonesia</option>
+                </select>
+            </div>
+        </div>
         
         <h1>网站地图</h1>
         <p>故障文字生成器的完整导航结构 - 所有页面和功能的综合指南</p>
@@ -237,5 +253,31 @@
             </ul>
         </div>
     </div>
+    
+    <script>
+        function changeLanguage(language) {
+            if (language === 'zh') {
+                window.location.href = 'sitemap.html';
+            } else if (language === 'en') {
+                window.location.href = '../sitemap.html';
+            } else if (language === 'es') {
+                window.location.href = '../es/sitemap.html';
+            } else if (language === 'ar') {
+                window.location.href = '../ar/sitemap.html';
+            } else if (language === 'hi') {
+                window.location.href = '../hi/sitemap.html';
+            } else if (language === 'fr') {
+                window.location.href = '../fr/sitemap.html';
+            } else if (language === 'pt') {
+                window.location.href = '../pt/sitemap.html';
+            } else if (language === 'ru') {
+                window.location.href = '../ru/sitemap.html';
+            } else if (language === 'bn') {
+                window.location.href = '../bn/sitemap.html';
+            } else if (language === 'id') {
+                window.location.href = '../id/sitemap.html';
+            }
+        }
+    </script>
 </body>
 </html> 
