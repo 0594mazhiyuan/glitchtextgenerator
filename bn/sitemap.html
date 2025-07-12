@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সাইটম্যাপ - গ্লিচ টেক্সট জেনারেটর</title>
+    <meta name="description" content="গ্লিচ টেক্সট জেনারেটরের সাইটম্যাপ। আমাদের ওয়েবসাইটের সমস্ত পৃষ্ঠা এবং টুলের একটি সম্পূর্ণ তালিকা।">
+    <meta name="keywords" content="সাইটম্যাপ, গ্লিচ টেক্সট জেনারেটর, ওয়েবসাইট ম্যাপ, পৃষ্ঠা তালিকা">
+    <meta name="author" content="গ্লিচ টেক্সট জেনারেটর">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Bengali">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="সাইটম্যাপ - গ্লিচ টেক্সট জেনারেটর">
+    <meta property="og:description" content="গ্লিচ টেক্সট জেনারেটরের সাইটম্যাপ। আমাদের ওয়েবসাইটের সমস্ত পৃষ্ঠা এবং টুলের একটি সম্পূর্ণ তালিকা।">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glitchtextgenerator.com/sitemap.html">
+    <meta property="og:image" content="https://glitchtextgenerator.com/logo.png">
+    <meta property="og:site_name" content="গ্লিচ টেক্সট জেনারেটর">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="সাইটম্যাপ - গ্লিচ টেক্সট জেনারেটর">
+    <meta name="twitter:description" content="গ্লিচ টেক্সট জেনারেটরের সাইটম্যাপ। আমাদের ওয়েবসাইটের সমস্ত পৃষ্ঠা এবং টুলের একটি সম্পূর্ণ তালিকা।">
+    <meta name="twitter:image" content="https://glitchtextgenerator.com/logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .sitemap-section {
+            margin-bottom: 2rem;
+        }
+        .sitemap-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+        }
+        .sitemap-list li {
+            margin-bottom: 0.5rem;
+        }
+        .sitemap-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sitemap-list a:hover {
+            color: var(--primary-color);
+        }
+        .sitemap-list i {
+            color: var(--accent-color);
+            width: 16px;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        .back-home:hover {
+            color: var(--primary-hover);
+        }
+        .language-section {
+            background: var(--background-light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        .language-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .priority-high {
+            border-left: 3px solid var(--success-color);
+            padding-left: 0.5rem;
+        }
+        .priority-medium {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 0.5rem;
+        }
+        .priority-low {
+            border-left: 3px solid var(--text-secondary);
+            padding-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="sitemap-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <a href="index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Glitch Text Generator
+            </a>
+            <div class="language-selector">
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="en">🇺🇸 English</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="hi">🇮🇳 हिन्दी</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="pt">🇵🇹 Português</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="bn" selected>🇧🇩 বাংলা</option>
+                    <option value="id">🇮🇩 Indonesia</option>
+                </select>
+            </div>
+        </div>
+        
+        <h1>সাইটম্যাপ</h1>
+        <p class="subtitle">আমাদের ওয়েবসাইটের সমস্ত পৃষ্ঠা এবং টুলের একটি সম্পূর্ণ তালিকা</p>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2>মূল টুল</h2>
+                <ul class="sitemap-list">
+                    <li><a href="index.html">গ্লিচ টেক্সট জেনারেটর</a> - মূল টেক্সট ইফেক্ট জেনারেটর</li>
+                    <li><a href="font-generator.html">ফন্ট জেনারেটর</a> - ইউনিকোড ফন্ট স্টাইল জেনারেটর</li>
+                    <li><a href="glitch-logo.html">গ্লিচ লোগো জেনারেটর</a> - টাইপোগ্রাফি লোগো ডিজাইন টুল</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>ইফেক্ট বিভাগ</h2>
+                <ul class="sitemap-list">
+                    <li><a href="index.html#zalgo">জালগো টেক্সট</a> - ভীতিকর এবং বিকৃত টেক্সট ইফেক্ট</li>
+                    <li><a href="index.html#matrix">ম্যাট্রিক্স স্টাইল</a> - সাইবারপাঙ্ক-থিমযুক্ত টেক্সট</li>
+                    <li><a href="index.html#shuffle">শাফল গ্লিচ</a> - গ্লিচি এবং বিকৃত টেক্সট</li>
+                    <li><a href="index.html#mirror">মিরর টেক্সট</a> - প্রতিসম টেক্সট আর্ট</li>
+                    <li><a href="index.html#logo">গ্লিচ লোগো</a> - টাইপোগ্রাফি-ফোকাসড লোগো</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>ব্যবহারের গাইড</h2>
+                <ul class="sitemap-list">
+                    <li><a href="index.html#how-it-works">কীভাবে কাজ করে</a> - টেক্সট জেনারেটর প্রক্রিয়া</li>
+                    <li><a href="index.html#tips">ব্যবহারের টিপস</a> - সর্বোত্তম ফলাফলের জন্য গাইড</li>
+                    <li><a href="index.html#faq">প্রায়শই জিজ্ঞাসিত প্রশ্ন</a> - সাধারণ প্রশ্নের উত্তর</li>
+                    <li><a href="index.html#about">সম্পর্কে</a> - গ্লিচ টেক্সট সম্পর্কে তথ্য</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>ব্যবহারের ক্ষেত্র</h2>
+                <ul class="sitemap-list">
+                    <li><a href="index.html#gaming">গেমিং</a> - ইউজারনেম এবং ক্ল্যান ট্যাগ</li>
+                    <li><a href="index.html#social">সোশ্যাল মিডিয়া</a> - পোস্ট এবং মন্তব্য</li>
+                    <li><a href="index.html#art">ডিজিটাল আর্ট</a> - শিল্পকর্মে টেক্সট ইফেক্ট</li>
+                    <li><a href="index.html#writing">ক্রিয়েটিভ রাইটিং</a> - গল্প এবং সৃজনশীল লেখা</li>
+                    <li><a href="index.html#design">ওয়েব ডিজাইন</a> - শিরোনাম এবং UI উপাদান</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>ভাষা সমর্থন</h2>
+                <ul class="sitemap-list">
+                    <li><a href="../index.html">ইংরেজি</a> - মূল ভাষা</li>
+                    <li><a href="../zh/index.html">চাইনিজ</a> - 中文</li>
+                    <li><a href="../es/index.html">স্প্যানিশ</a> - Español</li>
+                    <li><a href="../ar/index.html">আরবি</a> - العربية</li>
+                    <li><a href="index.html">বাংলা</a> - বর্তমান ভাষা</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2>আইনি পৃষ্ঠা</h2>
+                <ul class="sitemap-list">
+                    <li><a href="privacy.html">গোপনীয়তা নীতি</a> - ডেটা সুরক্ষা এবং গোপনীয়তা</li>
+                    <li><a href="sitemap.html">সাইটম্যাপ</a> - বর্তমান পৃষ্ঠা</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> Tools & Features</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html#copy"><i class="fas fa-copy"></i>Copy to Clipboard</a></li>
+                    <li class="priority-high"><a href="index.html#save"><i class="fas fa-image"></i>Save as Image</a></li>
+                    <li class="priority-medium"><a href="index.html#intensity"><i class="fas fa-sliders-h"></i>Intensity Control</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#features"><i class="fas fa-star"></i>Logo Features</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>Logo Examples</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#load-more"><i class="fas fa-plus"></i>Load More Fonts</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-info-circle"></i> Information & Help</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#about"><i class="fas fa-info"></i>About Glitch Text</a></li>
+                    <li class="priority-medium"><a href="index.html#how-it-works"><i class="fas fa-cogs"></i>How It Works</a></li>
+                    <li class="priority-medium"><a href="index.html#tips"><i class="fas fa-lightbulb"></i>Usage Tips</a></li>
+                    <li class="priority-medium"><a href="index.html#faq"><i class="fas fa-question-circle"></i>Frequently Asked Questions</a></li>
+                    <li class="priority-low"><a href="privacy.html"><i class="fas fa-shield-alt"></i>Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="sitemap-section">
+            <h2><i class="fas fa-external-link-alt"></i> External Resources</h2>
+            <ul class="sitemap-list">
+                <li><a href="sitemap.xml"><i class="fas fa-sitemap"></i>XML Sitemap</a></li>
+                <li><a href="robots.txt"><i class="fas fa-robot"></i>Robots.txt</a></li>
+                <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i>GitHub Repository</a></li>
+                <li><a href="https://glyphy.io/font-generator" target="_blank"><i class="fas fa-external-link-alt"></i>Inspired by Glyphy</a></li>
+            </ul>
+        </div>
+        
+        <div class="sitemap-section">
+            <h2><i class="fas fa-chart-bar"></i> Site Statistics</h2>
+            <ul class="sitemap-list">
+                <li><i class="fas fa-file"></i>Total Pages: 12+ (including language versions)</li>
+                <li><i class="fas fa-language"></i>Languages: English, Chinese, Spanish, Arabic, Hindi</li>
+                <li><i class="fas fa-magic"></i>Tools: Text Generator, Font Generator, Logo Generator</li>
+                <li><i class="fas fa-palette"></i>Effects: 5+ glitch text effects</li>
+                <li><i class="fas fa-font"></i>Fonts: 300+ Unicode font styles</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        function changeLanguage(lang) {
+            if(lang === 'zh') {
+                window.location.href = '../zh/sitemap.html';
+            } else if(lang === 'en') {
+                window.location.href = '../sitemap.html';
+            } else if(lang === 'es') {
+                window.location.href = '../es/sitemap.html';
+            } else if(lang === 'ar') {
+                window.location.href = '../ar/sitemap.html';
+            } else if(lang === 'hi') {
+                window.location.href = '../hi/sitemap.html';
+            } else if(lang === 'fr') {
+                window.location.href = '../fr/sitemap.html';
+            } else if(lang === 'pt') {
+                window.location.href = '../pt/sitemap.html';
+            } else if(lang === 'ru') {
+                window.location.href = '../ru/sitemap.html';
+            } else if(lang === 'bn') {
+                window.location.href = 'sitemap.html';
+            } else if(lang === 'id') {
+                window.location.href = '../id/sitemap.html';
+            }
+        }
+    </script>
+</body>
+</html> 
