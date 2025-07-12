@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خريطة الموقع - مولد النص المشوه</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .sitemap-section {
+            margin-bottom: 2rem;
+        }
+        .sitemap-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+        }
+        .sitemap-list li {
+            margin-bottom: 0.5rem;
+        }
+        .sitemap-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sitemap-list a:hover {
+            color: var(--primary-color);
+        }
+        .sitemap-list i {
+            color: var(--accent-color);
+            width: 16px;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        .back-home:hover {
+            color: var(--primary-hover);
+        }
+        .language-section {
+            background: var(--background-light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        .language-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .priority-high {
+            border-left: 3px solid var(--success-color);
+            padding-left: 0.5rem;
+        }
+        .priority-medium {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 0.5rem;
+        }
+        .priority-low {
+            border-left: 3px solid var(--text-secondary);
+            padding-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="sitemap-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <a href="index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+                العودة إلى مولد النص المشوه
+            </a>
+            <div class="language-selector">
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="en">🇺🇸 English</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ar" selected>🇸🇦 العربية</option>
+                    <option value="hi">🇮🇳 हिन्दी</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="pt">🇵🇹 Português</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="bn">🇧🇩 বাংলা</option>
+                    <option value="id">🇮🇩 Indonesia</option>
+                </select>
+            </div>
+        </div>
+        
+        <h1>خريطة الموقع</h1>
+        <p>الهيكل الكامل للتنقل في مولد النص المشوه - دليلك الشامل لجميع الصفحات والميزات</p>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-home"></i> الصفحات الرئيسية</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html"><i class="fas fa-star"></i>الصفحة الرئيسية (مولد النص المشوه)</a></li>
+                    <li class="priority-high"><a href="font-generator.html"><i class="fas fa-magic"></i>أداة مولد الخطوط</a></li>
+                    <li class="priority-high"><a href="glitch-logo.html"><i class="fas fa-font"></i>مولد اللوغو المشوه</a></li>
+                    <li class="priority-medium"><a href="privacy.html"><i class="fas fa-shield-alt"></i>سياسة الخصوصية</a></li>
+                    <li class="priority-low"><a href="sitemap.html"><i class="fas fa-sitemap"></i>خريطة الموقع</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-globe"></i> الإصدارات اللغوية</h2>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag-usa"></i> الإنجليزية (الافتراضية)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="../index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                        <li><a href="../font-generator.html"><i class="fas fa-magic"></i>مولد الخطوط</a></li>
+                        <li><a href="../glitch-logo.html"><i class="fas fa-font"></i>مولد اللوغو</a></li>
+                        <li><a href="../privacy.html"><i class="fas fa-shield-alt"></i>سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> 中文 (الصينية)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="../zh/index.html"><i class="fas fa-home"></i>主页</a></li>
+                        <li><a href="../zh/font-generator.html"><i class="fas fa-magic"></i>字体生成器</a></li>
+                        <li><a href="../zh/glitch-logo.html"><i class="fas fa-font"></i>标志生成器</a></li>
+                        <li><a href="../zh/privacy.html"><i class="fas fa-shield-alt"></i>隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> Español (الإسبانية)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="../es/index.html"><i class="fas fa-home"></i>Página Principal</a></li>
+                        <li><a href="../es/font-generator.html"><i class="fas fa-magic"></i>Generador de Fuentes</a></li>
+                        <li><a href="../es/glitch-logo.html"><i class="fas fa-font"></i>Generador de Logo</a></li>
+                        <li><a href="../es/privacy.html"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="language-section">
+                    <h3><i class="fas fa-flag"></i> العربية (العربية)</h3>
+                    <ul class="sitemap-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                        <li><a href="font-generator.html"><i class="fas fa-magic"></i>مولد الخطوط</a></li>
+                        <li><a href="glitch-logo.html"><i class="fas fa-font"></i>مولد اللوغو</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i>سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-palette"></i> تأثيرات النص</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html#zalgo"><i class="fas fa-ghost"></i>تأثير نص زالغو</a></li>
+                    <li class="priority-high"><a href="index.html#matrix"><i class="fas fa-code"></i>تأثير أسلوب ماتريكس</a></li>
+                    <li class="priority-medium"><a href="index.html#shuffle"><i class="fas fa-random"></i>تأثير التشويش العشوائي</a></li>
+                    <li class="priority-medium"><a href="index.html#mirror"><i class="fas fa-mirror"></i>تأثير النص المرآة</a></li>
+                    <li class="priority-high"><a href="index.html#logo"><i class="fas fa-font"></i>لوغو طباعي مشوه</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-font"></i> ميزات مولد الخطوط</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="font-generator.html"><i class="fas fa-magic"></i>أداة مولد الخطوط</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#unicode"><i class="fas fa-text-height"></i>أنماط خطوط يونيكود</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#social-media"><i class="fas fa-share-alt"></i>خطوط وسائل التواصل الاجتماعي</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#copy-paste"><i class="fas fa-copy"></i>نسخ ولصق الخطوط</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#preview"><i class="fas fa-eye"></i>معاينة فورية</a></li>
+                    <li class="priority-medium"><a href="font-generator.html#download"><i class="fas fa-download"></i>تحميل صور الخطوط</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> ميزات مولد اللوغو</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="glitch-logo.html"><i class="fas fa-font"></i>مولد اللوغو المشوه</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#features"><i class="fas fa-star"></i>ميزات اللوغو</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#examples"><i class="fas fa-images"></i>أمثلة اللوغو</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#tutorial"><i class="fas fa-graduation-cap"></i>دليل تصميم اللوغو</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#typography"><i class="fas fa-font"></i>أنماط الطباعة</a></li>
+                    <li class="priority-medium"><a href="glitch-logo.html#colors"><i class="fas fa-palette"></i>تخصيص الألوان</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-users"></i> حالات الاستخدام</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#gaming"><i class="fas fa-gamepad"></i>أسماء المستخدمين في الألعاب</a></li>
+                    <li class="priority-medium"><a href="index.html#social"><i class="fas fa-share-alt"></i>وسائل التواصل الاجتماعي</a></li>
+                    <li class="priority-medium"><a href="index.html#art"><i class="fas fa-paint-brush"></i>الفن الرقمي</a></li>
+                    <li class="priority-medium"><a href="index.html#writing"><i class="fas fa-pen"></i>الكتابة الإبداعية</a></li>
+                    <li class="priority-medium"><a href="index.html#design"><i class="fas fa-desktop"></i>التصميم الويب</a></li>
+                    <li class="priority-medium"><a href="index.html#typography"><i class="fas fa-font"></i>فن الطباعة</a></li>
+                    <li class="priority-medium"><a href="index.html#brand"><i class="fas fa-trademark"></i>الهوية التجارية</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> الأدوات والميزات</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html#copy"><i class="fas fa-copy"></i>نسخ إلى الحافظة</a></li>
+                    <li class="priority-high"><a href="index.html#save"><i class="fas fa-image"></i>حفظ كصورة</a></li>
+                    <li class="priority-medium"><a href="index.html#intensity"><i class="fas fa-sliders-h"></i>التحكم في الشدة</a></li>
+                    <li class="priority-medium"><a href="index.html#effects"><i class="fas fa-magic"></i>تأثيرات متعددة</a></li>
+                    <li class="priority-medium"><a href="index.html#preview"><i class="fas fa-eye"></i>معاينة فورية</a></li>
+                    <li class="priority-medium"><a href="index.html#download"><i class="fas fa-download"></i>تحميل عالي الجودة</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-info-circle"></i> معلومات وإرشادات</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#about"><i class="fas fa-info"></i>حول المولد</a></li>
+                    <li class="priority-medium"><a href="index.html#how-it-works"><i class="fas fa-cogs"></i>كيف يعمل</a></li>
+                    <li class="priority-medium"><a href="index.html#tips"><i class="fas fa-lightbulb"></i>نصائح الاستخدام</a></li>
+                    <li class="priority-medium"><a href="index.html#faq"><i class="fas fa-question-circle"></i>الأسئلة الشائعة</a></li>
+                    <li class="priority-medium"><a href="privacy.html"><i class="fas fa-shield-alt"></i>سياسة الخصوصية</a></li>
+                    <li class="priority-medium"><a href="sitemap.html"><i class="fas fa-sitemap"></i>خريطة الموقع</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="grid-layout">
+            <div class="sitemap-section">
+                <h2><i class="fas fa-mobile-alt"></i> التوافق والوصول</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-high"><a href="index.html"><i class="fas fa-mobile"></i>متوافق مع الهاتف المحمول</a></li>
+                    <li class="priority-high"><a href="index.html"><i class="fas fa-tablet-alt"></i>متوافق مع الأجهزة اللوحية</a></li>
+                    <li class="priority-medium"><a href="index.html"><i class="fas fa-desktop"></i>متوافق مع سطح المكتب</a></li>
+                    <li class="priority-medium"><a href="index.html"><i class="fas fa-globe"></i>متوافق مع جميع المتصفحات</a></li>
+                    <li class="priority-medium"><a href="index.html"><i class="fas fa-wifi"></i>يعمل بدون اتصال بالإنترنت</a></li>
+                    <li class="priority-medium"><a href="index.html"><i class="fas fa-bolt"></i>سرعة فورية</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-section">
+                <h2><i class="fas fa-heart"></i> الدعم والمجتمع</h2>
+                <ul class="sitemap-list">
+                    <li class="priority-medium"><a href="index.html#feedback"><i class="fas fa-comment"></i>إرسال الملاحظات</a></li>
+                    <li class="priority-medium"><a href="index.html#contact"><i class="fas fa-envelope"></i>اتصل بنا</a></li>
+                    <li class="priority-medium"><a href="index.html#share"><i class="fas fa-share"></i>شارك مع الأصدقاء</a></li>
+                    <li class="priority-medium"><a href="index.html#community"><i class="fas fa-users"></i>انضم للمجتمع</a></li>
+                    <li class="priority-medium"><a href="index.html#updates"><i class="fas fa-bell"></i>التحديثات الجديدة</a></li>
+                    <li class="priority-medium"><a href="index.html#help"><i class="fas fa-question"></i>مساعدة ودعم</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--background-light); border-radius: var(--border-radius);">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">استكشف جميع ميزات مولد النص المشوه</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">من تأثيرات زالغو المخيفة إلى لوغوهات الطباعة الاحترافية، لدينا كل ما تحتاجه لإنشاء نص مميز ومثير للاهتمام.</p>
+            <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-color); color: white; padding: 0.8rem 1.5rem; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; transition: var(--transition);">
+                <i class="fas fa-magic"></i>
+                ابدأ الآن
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function changeLanguage(language) {
+            if (language === 'zh') {
+                window.location.href = '../zh/sitemap.html';
+            } else if (language === 'en') {
+                window.location.href = '../sitemap.html';
+            } else if (language === 'es') {
+                window.location.href = '../es/sitemap.html';
+            } else if (language === 'ar') {
+                window.location.href = 'sitemap.html';
+            } else if (language === 'hi') {
+                window.location.href = '../hi/sitemap.html';
+            } else if (language === 'fr') {
+                window.location.href = '../fr/sitemap.html';
+            } else if (language === 'pt') {
+                window.location.href = '../pt/sitemap.html';
+            } else if (language === 'ru') {
+                window.location.href = '../ru/sitemap.html';
+            } else if (language === 'bn') {
+                window.location.href = '../bn/sitemap.html';
+            } else if (language === 'id') {
+                window.location.href = '../id/sitemap.html';
+            }
+        }
+    </script>
+</body>
+</html> 
